@@ -1,0 +1,437 @@
+::selection {
+    background: #FF4D4D;
+    color: #fff;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-color: var(--swiper-theme-color);
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    /* font: 15px / 1.5 'open_sansregular', sans-serif; */
+    color: #4e4e4e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.page-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: none;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.page-header {
+    position: relative;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+
+.page-header {
+    background-image: url(https://www.bodychannel.co.kr/dist/img/intro/body_bg2.jpg) !important;
+    background-position: top;
+}
+
+.xs-margin,
+.sm-margin,
+.md-margin,
+.lg-margin,
+.xlg-margin,
+.md-margin2x,
+.lg-margin2x,
+.xlg-margin2x,
+.md-margin3x,
+.lg-margin3x,
+.xlg-margin3x {
+    display: block;
+    min-height: 1px;
+}
+
+.md-margin2x {
+    margin-bottom: 60px !important;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+.content {
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.page-header-wrapper {
+    padding: 182px 0 100px 0;
+    color: #fff;
+}
+
+.page-header-wrapper .top-sub-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.page-header-wrapper .top-sub-desc {
+    font-size: 21px;
+}
+
+
+.serv-box .row {
+    margin: 5rem 0;
+}
+
+.btn-group-vertical>.btn-group:after,
+.btn-group-vertical>.btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+    display: table;
+    content: " ";
+}
+
+.btn-group-vertical>.btn-group:after,
+.btn-toolbar:after,
+.clearfix:after,
+.container-fluid:after,
+.container:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after,
+.modal-footer:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.pager:after,
+.panel-body:after,
+.row:after {
+    clear: both;
+}
+
+.serv-box .row .col {
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.serv-box .row .col .serv-desc-box {
+    padding: 5rem 2.5rem 1rem 2.5rem;
+}
+
+.serv-box {
+    margin-top: 30px !important;
+}
+
+p {
+    margin: 0 0 1.5em;
+}
+
+.fs25 {
+    font-size: 25px !important;
+}
+
+.fs25 {
+    font-weight: 900 !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+/* @media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .col {
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .col {
+        float: left;
+    }
+}
+@media (min-width: 768px) {
+    .col {
+        width: 50%;
+    }
+} */
+.container {
+    width:1170px;
+}
+
+.col {
+    float: left;
+}
+
+.mt10p {
+    margin: 0;
+}
+
+.mt10p {
+    text-align: center !important;
+}
+
+.mt10p {
+    margin-top: 10% !important;
+}
+
+.mt10p {
+    color: #fff !important;
+}
+
+.mt10p {
+    background-color: #FF4C4C !important;
+}
+
+.mt10p .sys-tit-wrap {
+    padding: 1rem 0;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mb5 {
+    font-weight: 600 !important;
+}
+
+.mt10p .sys-tit-wrap p:first-child {
+    font-size: 30px;
+    margin: 0;
+}
+
+.col-md-4 {
+    float: left;
+}
+
+.mt10p .sys-info-wrap .col-md-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: inline-block;
+    padding: 0;
+}
+
+.mt10p .sys-info-wrap .col-md-4 .info-tit {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mt10p .sys-info-wrap .col-md-4 .info-tit {
+    font-size: 16px;
+}
+
+.mt10p .sys-info-wrap .col-md-4 {
+    width: 33.33333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+}
+
+.mt10p .sys-info-wrap .col-md-4 p:last-child {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

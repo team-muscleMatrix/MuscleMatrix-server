@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>헤더</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main/header.css" />
+  </head>
+  
+  <body>
+    <div class="main-allwrap" th:fragment="header">
+      <header class="header-allwrap">
+        <div class="header-wrap-div">
+          <nav class="header-wrap-nav">
+            <div class="header-container">
+              <div class="logo-wrap">
+                <a class="real-logo-link">
+                  <img
+                    src="/images/MuscleMatrixLogo.png"
+                    class="logo-img"
+                    width="250"
+                    height="45"
+                  />
+                </a>
+              </div>
+              <div class="letter-wrap">
+                <ul class="letter-wrap-ul">
+                  <li class="letter-realwrap-li">
+                    <a class="letter-wrap-link">MUSCLEMATRIX</a>
+                  </li>
+                  <li class="letter-realwrap-li">
+                    <a class="letter-wrap-link">HEALTH</a>
+                  </li>
+                  <li class="letter-realwrap-li">
+                    <a class="letter-wrap-link">교육과정</a>
+                  </li>
+                  <li class="letter-realwrap-li">
+                    <a class="letter-wrap-link">PT 무료체험</a>
+                  </li>
+                  <li class="letter-realwrap-li">
+                    <a class="letter-wrap-link">이벤트 프로그램</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+::selection {
+    background: #FF4D4D;
+    color: #fff;
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+input {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+body {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    overflow-x: hidden;
+    background-color: #fff;
+    color: #000;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.join-allwrap {
+    min-height: 100%;
+}
+
+.join-title-wrap {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: none;
+    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+    background-repeat: repeat-y;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-image: url(https://www.bodychannel.co.kr/dist/img/member/join_top_bg.jpg) !important;
+}
+
+.join-title-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+}
+
+.join-title-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.join-title-letterwrap {
+    padding: 182px 50px 100px 0;
+    color: #fff;
+    position: relative;
+    min-height: 1px;
+}
+
+.join-title-realtitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.join-title-subtitle {
+    font-size: 21px;
+}
+
+.margin {
+    margin-bottom: 60px !important;
+    display: block;
+    min-height: 1px;
+}
+
+.join-content-wrap {
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.join-content-div {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+}
+
+.join-content-title-wrap {
+    font-size: 20px;
+    line-height: 1.4 !important;
+    margin-top: 30px !important;
+    font-weight: 100;
+}
+
+.join-info-wrap {
+    margin-top: 70px !important;
+}
+
+.join-info-fd {
+    margin-bottom: 20px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.join-info-sd {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.join-info-sdfd {
+    float: left;
+    width: 150px;
+    padding-top: 16px;
+    font-size: 20px;
+}
+
+.important {
+    font-weight: 600 !important;
+    color: #f2477f !important;
+}
+
+.join-info-sdsd {
+    color: #333;
+    box-sizing: border-box;
+    width: calc(100% - 150px);
+    padding: 0px 0 0px 10px;
+    font-size: 20px;
+}
+
+.join-info-email {
+    width: 400px;
+    height: 44px;
+    padding: 0;
+    font-size: 1.3rem;
+    color: #333;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #d5d5d5;
+    box-sizing: border-box;
+}
+
+.join-info-td {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.join-info-tdfd {
+    float: left;
+    width: 150px;
+    padding-top: 16px;
+    font-size: 20px;
+}
+
+.join-info-fod {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.join-info-fodfd {
+    float: left;
+    width: 150px;
+    padding-top: 16px;
+    font-size: 20px;
+}
+
+.join-info-fodsd {
+    float: left;
+    color: #333;
+    box-sizing: border-box;
+    width: calc(100% - 150px);
+    padding: 20px 0 0px 10px;
+    font-size: 20px;
+}
+
+label {
+    max-width: 100%;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.join-info-fradiowrap {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    line-height: normal;
+    margin: 4px 0 0;
+} */
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+
+/* 선택된 라디오 버튼 스타일 */
+input[type="radio"]:checked {
+    background-color: red;
+    border: 2px solid red;
+}
+
+.join-info-sex {
+    margin-left: 20px !important;
+    font-size: 20px !important;
+}
+
+.left-margin {
+    margin-left: 50px !important;
+}
+
+.sumit-btn-wrap {
+    text-align: center !important;
+    margin-top: 120px !important;
+    margin-bottom: 100px !important;
+}
+
+.sumit-btn {
+    padding: 1.5rem;
+    width: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #FF4C4C;
+    border: 0;
+}

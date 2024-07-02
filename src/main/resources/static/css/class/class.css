@@ -1,0 +1,947 @@
+::selection {
+    background: #FF4D4D;
+    color: #fff;
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+:root {
+    --swiper-navigation-size: 44px;
+    /* --swiper-navigation-color: var(--swiper-theme-color); */
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    /* font: 15px / 1.5 'open_sansregular', sans-serif; */
+    color: #4e4e4e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+body {
+    /* 봐서 이 폰트는 제거할것 */
+    /* font-family: 'Noto Sans KR', sans-serif;  */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.wrapper {
+    min-height: 100%;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+img {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0 0 1.5em;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+    clear: both;
+}
+
+a {
+    background-color: transparent;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+a {
+    color: #c90e31;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.page-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: none;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.page-header, .page-header-fixed {
+    position: relative;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+
+.page-header {
+    background-image: url(https://www.bodychannel.co.kr/dist/img/intro/body_bg2.jpg) !important;
+    background-position: top;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    width: 1170px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+.page-header-wrapper {
+    padding: 182px 0 100px 0;
+    color: #fff;
+}
+
+.page-header-wrapper .top-sub-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.page-header-wrapper .top-sub-desc {
+    font-size: 21px;
+}
+
+
+
+
+
+.xs-margin, .sm-margin, .md-margin, .lg-margin, .xlg-margin, .md-margin2x, .lg-margin2x, .xlg-margin2x, .md-margin3x, .lg-margin3x, .xlg-margin3x {
+    display: block;
+    min-height: 1px;
+}
+
+.md-margin2x {
+    margin-bottom: 60px !important;
+}
+
+
+
+
+.academy_container {
+    background-color: #ff3944;
+    padding: 30px 0 80px;
+}
+
+.trainer-title {
+    font-size: 3rem;
+    color: #fff !important;
+    font-family: 'GmarketSansTTFMedium', sans-serif;
+    margin-bottom: 30px;
+}
+
+.tac {
+    text-align: center !important;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.container.bg-white {
+    padding-top: 30px;
+}
+
+.trainer-introduce {
+    /* font-family: 'GmarketSansTTFMedium', sans-serif; */
+    font-size: 2rem;
+}
+
+.trainer-introduce .row {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.col-lg-1.text-center{
+    float: left;
+}
+
+/* .col-lg-1.text-center {
+    width: 8.33333333%;
+} */
+
+.col-lg-1.text-center {
+    width: 8.66666667%;
+}
+
+.tac.trainer-title{
+    font-weight: bold;
+}
+
+.col-lg-10.col-sm-10{
+    font-weight: bold;
+}
+
+.col-sm-10{
+    /* float: left; */
+}
+
+.col-sm-10 {
+    width: 83.33333333%;
+}
+
+.col-lg-6.this{
+    float: left;
+    width: 50%;
+}
+
+
+
+
+.edu-certi-wrap .certi-txt-box {
+    border: 8px solid #E5E5E5;
+    color: #000;
+    width: 100%;
+    display: table;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row {
+    display: table-row;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row .row-left-cell {
+    display: table-cell;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px 25px 20px 40px;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row .row-right-cell {
+    display: table-cell;
+    padding: 15px 0;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row .row-right-cell .right-tit-box {
+    display: inline-block;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row .row-right-cell .right-tit-box div {
+    width: 95px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    line-height: 1.7;
+}
+
+.edu-certi-wrap .certi-txt-box .txt-row .row-right-cell .right-txt-box {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.edu-intro-wrap {
+    text-align: center;
+    color: #000;
+}
+
+.mt100 {
+    margin-top: 100px !important;
+}
+
+.edu-intro-wrap .intro-tit-box {
+    background-image: url(https://www.bodychannel.co.kr/dist/img/intro/pro_title_bg.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+
+.edu-intro-wrap .intro-desc-box {
+    padding: 2.5rem 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.edu-intro-wrap .intro-desc-box span {
+    text-decoration: underline;
+    color: red;
+}
+
+.trainer-introduce span {
+    color: #ff3944;
+}
+
+.mt90 {
+    margin-top: 90px !important;
+}
+
+.col-lg-12{
+    float:left;
+}
+
+.col-lg-12 {
+    width: 100%;
+}
+
+.orange_round_btn {
+    background-color: #ff3944;
+    color: #fff;
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 2rem;
+    font-family: 'GmarketSansTTFMedium', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.marginTop30 {
+    margin-top: 30px;
+}
+
+.col-lg-4.text-center{
+    float: left;
+    width: 33.33333333%;
+}
+
+.width50P {
+    width: 50%;
+}
+
+.teacher_name {
+    margin-top: 35px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.marginBoth30 {
+    margin: 30px 0;
+}
+
+.edu-brand-title {
+    margin-top: 100px;
+    height: 150px;
+}
+
+.edu-brand-title p:nth-child(1) {
+    color: #000000;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.edu-brand-title p:nth-child(2) {
+    color: #FB1947;
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.academy-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.academy-wrap .academy-cont {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.academy-box-circle {
+    width: 14.7%;
+    border: 20px solid #ffb0db;
+    background-color: #FC1A4A;
+    border-radius: 50%;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.academy-wrap .academy-cont .academy-log-txt.color-white {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.academy-box-circle::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.academy-box-line {
+    width: 85%;
+    margin: 0px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.academy-box-line .academy-box {
+    width: 25%;
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.academy-box-line .academy-box .inner-box {
+    background-color: #E5E5E5;
+    border-radius: 90px;
+    height: 100px;
+    inline-height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.academy-wrap .academy-cont .academy-log-txt.color-black {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.academy-wrap .academy-cont .academy-log-txt.color-grey {
+    margin: 0;
+}
+
+.marginBoth90 {
+    margin: 90px 0;
+}
+
+.academy_round_btn {
+    background-color: #ff3944;
+    color: #fff;
+    padding: 20px 55px;
+    font-size: 3rem;
+    font-family: 'GmarketSansTTFMedium', sans-serif;
+    border-radius: 40px;
+}
+
+.teacher_program_container {
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈 설정 */
+    justify-content: center; /* 가운데 정렬 */
+    gap: 5px; /* 프로그램 사이 간격 */
+    margin-top: 10px; /* 위 요소들과 간격 */
+}
+.teacher_program {
+    background-color: #f0f0f0; /* 배경색 추가 */
+    padding: 5px 10px;
+    border-radius: 100%;
+    flex-basis: calc(33.33% - 20px); /* 한 줄에 3개씩 배치, 간격 고려 */
+    text-align: center; 
+}
+
+
+
+
+
+
+.teacher_intro {
+    margin-top: 35px;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.teacher_intro.this{
+    margin: 0 0 1.5em;
+    padding: 10px;
+    /* line-height: inherit; */
+}
+
+
+
+
+
+
+
+.teacher_intro.this {
+    margin: 0 0 1.5em;
+    padding: 10px;
+    line-height: 1.5;
+    max-height: 160px; /* 대략 5줄의 높이, 필요에 따라 조정 */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.teacher_intro.this li {
+    margin-bottom: 5px;
+}
+
+.teacher_intro.this::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.col-lg-4.text-center {
+    float: left;
+    width: 33.33333333%;
+}
+
+.teacher_intro.this {
+    margin: 0 0 1.5em;
+    padding: 10px;
+    line-height: 1.5;
+    max-height: 150px; /* 약 5줄의 높이, 필요에 따라 조정 */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.teacher_intro.this li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    max-width: 100%; /* 부모 요소의 너비를 초과하지 않도록 설정 */
+    box-sizing: border-box; /* padding을 너비에 포함 */
+    padding-right: 10px; /* 오른쪽에 약간의 여백 추가 */
+}
+
+.teacher_intro.this::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
