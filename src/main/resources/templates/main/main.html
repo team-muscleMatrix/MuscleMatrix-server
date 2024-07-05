@@ -303,21 +303,21 @@
               style="text-align: center; padding-bottom: 2.5rem"
             >
               <img
-                src="../../staticfiles/images/MuscleMatrixLogo.png"
+                src="/images/MuscleMatrixLogo.png"
                 width="240"
                 height="60"
               />
             </div>
             <div class="real-letter-wrap">
               <div class="real-letter-wrapdiv">
-                <span class="count">42</span>
+                <span class="count" th:text="${todayCount}">금일 가입자 수</span>
                 <div class="yellow-bar"></div>
                 <h3>
                   <span class="countname">금일 가입자</span>
                 </h3>
               </div>
               <div class="real-letter-wrapdiv">
-                <span class="count">247,891</span>
+                <span class="count" th:text="${totalCount}">누적 가입자 수</span>
                 <div class="yellow-bar"></div>
                 <h3>
                   <span class="countname">누적 회원수</span>

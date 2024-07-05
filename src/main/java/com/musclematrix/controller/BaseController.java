@@ -8,10 +8,10 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class BaseController {
 
-	//1. 모델에 값을 넣어주는 기능 (isLogin, member_id, member_profile, member_nickname)
+	//1. 모델에 값을 넣어주는 기능 (isLogin, membership_email)
 	@ModelAttribute("isLogin")
 	public String setLoginStatus(HttpSession session) {
-		return session.getAttribute("member_id") == null ? "no" : "yes";
+		return session.getAttribute("membership_email") == null ? "no" : "yes";
 	}
 	
 //	@ModelAttribute("member_id")

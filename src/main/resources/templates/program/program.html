@@ -2,461 +2,434 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/program/program.css" />
-    <link rel="stylesheet" href="/css/main/header.css" data-whatIsThis="헤더CSS임포트" />
-		<link rel="stylesheet" href="/css/main/footer.css" data-whatIsThis="푸터CSS임포트" />
-    
-    <title>그룹PT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/css/program/program.css" />
+<link rel="stylesheet" href="/css/main/header.css"
+	data-whatIsThis="헤더CSS임포트" />
+<link rel="stylesheet" href="/css/main/footer.css"
+	data-whatIsThis="푸터CSS임포트" />
+
+<title>그룹PT</title>
 </head>
 
 <body>
-    <div class="wrapper">
-    		<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
-    		
-        <div class="page-header background7" data-stellar-background-ratio="0.4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 page-header-wrapper">
-                        <div class="top-sub-title">Program</div>
-                        <div class="top-sub-desc">프로그램</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="md-margin2x"></div>
-
-
-
-
-
-        <section class="content this" role="main">
-            <div class="container">
-                <div class="row this">
-                    <div class="col-lg-12 text-center">
-                        <h4 style="color: #FF4C4C;">Weekly Exercise Schedule</h4>
-                        <div style="width: 35px;border-bottom: 3px solid #FF4C4C;margin-left: 49%;"></div>
-                    </div>
-                </div>
-
-
-                <div class="row app-pro-box">
-                    <span class="media-wrap view-one">
-                        <span class="media-info-box">
-                            <span class="content">
-                                <span class="sub-content">
-                                    <span class="sub-header fcff4c"><img
-                                            src="https://www.bodychannel.co.kr/dist/img/program/app_grap_img1.png"
-                                            class="mWt100p" style="max-width:385px;"></span>
-                                    <span class="sub-txt" style="text-align: left;">
-                                        <p class="mb15 fs25 fw7">5개의 심장박동 구역</p>
-                                        <p class="mb5 fs14 fw6">웨어러블을 손목에 착용한 후 운동 진행 시 심박수 수치와
-                                            칼로리 소모량이 실시간으로 화면에 연동되어 5가지 색상으로 표시됩니다.
-                                            500칼로리 소모 목표를 달성해보세요.</p>
-                                        <p class="mb0 fs14 fw6">
-                                            GroupP.T 주간 운동 일정표는 전지점 통합적으로 제공되는 운동 프로그램으로
-                                            app을 통해 운동예약시 지점에서 동일한 프로그램의 그룹수업을 받을 수 있습니다.
-                                            주간 운동목표와 운동영상을 보며 운동을 배워보시고,
-                                            지점을 나올 수 없을때 집에서 홈트레이닝 용도로 사용해 보세요.
-                                        </p>
-
-
-                                    </span>
-                                </span>
-                            </span>
-                        </span>
-
-
-                        <span class="media-video-box view-two">
-                            <span class="first-tile">
-                                <div class="play">
-                                    <div class="play-control">
-                                    </div>
-                                    <img src="/images/program-img.png" style="width: 100%;">
-                                </div>
-                            </span>
-
-                            <span class="second-tile img-bg-7" style="border-right: 1px solid #fff;"></span>
-                            <span class="second-tile img-bg-8"></span>
-                        </span>
-
-                    </span>
-                </div>
-                <div class="row program_type mt5p">
-                    <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center bgcff4">
-                        <span style="color: #fff;">Group P.T</span>
-                    </div>
-
-                </div>
-                <div class="row pro-app-wrap">
-                    <!-- 날짜 탭-->
-                    <div class="date-tab-wrap">
-                        <ul>
-                            <!-- 선택된것은 active가 붙음 -->
-                            <li class="date-tab active">
-                                <div class="day" data-week="MON">MON</div>
-
-                            </li>
-                            <li class="date-tab ">
-                                <div class="day" data-week="TUE">TUE</div>
-
-                            </li>
-                            <li class="date-tab ">
-                                <div class="day" data-week="WED">WED</div>
-
-                            </li>
-                            <li class="date-tab ">
-                                <div class="day" data-week="THU">THU</div>
-
-                            </li>
-                            <li class="date-tab">
-                                <div class="day" data-week="FRI">FRI</div>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 운동프로그램 -->
-
-
-                    <!-- 월요일 -->
-                    <!-- 선택된것은 active 클래스가 붙음 -->
-                    <!-- 아닌것은 unactive되서 안보임 -->
-                    <div class="exe-info-wrap active" data-week="MON">
-                        <div class="info-wrap video">
-                            <div class="video-top">
-                                <div class="logo">
-                                    <!-- 사이트 로고 이미지 -->
-                                    <img src="/images/MuscleMatrixLogo.png"
-                                        style="width: 100%;max-width: 182px;">
-                                </div>
-                            </div>
-
-                            <div class="video-content tac" style="height: 360px;">
-                                <!-- 프로그램 이미지 -->
-                                <img class="image" src="/images/blank-image.png">
-                            </div>
-                        </div>
-                        <div class="info-wrap desc">
-                            <div class="info-desc-box">
-                                <div>운동효과: 하체/힙/코어</div>
-                                <div>운동부위: 전신</div>
-                                <div>목표 칼로리: 500 kcal</div>
-                                <div>운동명: 날이 좋네요^^</div>
-                            </div>
-                            <div class="info-video-list ">
-                                <div class="top-tit">운동프로그램</div>
-                                <div class="bot-list">
-                                    <div class="list-box">
-                                        <!-- 선택한것에 active클래스가 붙음 -->
-                                        <div class="select active" data-num="1">
-                                            09:00~10:00<br> 아침을 깨우는 요가 스트레칭
-                                            <div class="select-desc">
-                                                간단한 요가 동작으로 몸을 깨우고 하루를 활기차게 시작하는 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="2">
-                                            10:00~11:00<br>탄탄 코어 만들기
-                                            <div class="select-desc">
-                                                다양한 복근 운동을 통해 코어 근력을 강화하는 집중 프로그램
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="3">
-                                            13:00~14:00<br> 자세 교정 필라테스
-                                            <div class="select-desc">
-                                                코어 강화와 자세 교정에 중점을 둔 필라테스 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="4">
-                                            13:00~14:00<br> 신나는 줄넘기 교실
-                                            <div class="select-desc">
-                                                다양한 줄넘기 기술을 배우며 즐겁게 유산소 운동하는 클래스
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 화요일 -->
-                    <div class="exe-info-wrap unactive" data-week="TUE">
-                        <div class="info-wrap video">
-                            <div class="video-top">
-                                <div class="logo">
-                                    <!-- 사이트 로고 이미지 -->
-                                    <img src="/images/MuscleMatrixLogo.png"
-                                        style="width: 100%;max-width: 182px;">
-                                </div>
-                            </div>
-
-                            <div class="video-content tac" style="height: 360px;">
-                                <!-- 프로그램 이미지 -->
-                                <img class="image" src="/images/blank-image.png">
-                            </div>
-                        </div>
-                        <div class="info-wrap desc">
-                            <div class="info-desc-box">
-                                <div>운동효과: 전신</div>
-                                <div>운동부위: 전신</div>
-                                <div>목표 칼로리: 500 kcal</div>
-                                <div>운동명: 고강도의 유산소 운동 GO!!</div>
-                            </div>
-                            <div class="info-video-list ">
-                                <div class="top-tit">운동프로그램</div>
-                                <div class="bot-list">
-                                    <div class="list-box">
-                                        <!-- 선택한것에 active클래스가 붙음 -->
-                                        <div class="select" data-num="1">
-                                            09:00~10:00<br> 아침 활력 충전소
-                                            <div class="select-desc">
-                                                가볍고 효과적인 아침 운동으로 하루를 활기차게 시작하는 클래스
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="2">
-                                            10:00~11:00<br> 자세 교정 필라테스
-                                            <div class="select-desc">
-                                                코어 강화와 자세 교정에 중점을 둔 필라테스 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="3">
-                                            13:00~14:00<br> 근력 UP! 체지방 DOWN!
-                                            <div class="select-desc">
-                                                근력 운동과 유산소 운동을 병행하여 체지방 감소에 초점을 맞춘 프로그램
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="4">
-                                            17:00~18:00<br> 탄탄 코어 만들기
-                                            <div class="select-desc">
-                                                다양한 복근 운동을 통해 코어 근력을 강화하는 집중 프로그램
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 수요일 -->
-                    <div class="exe-info-wrap unactive" data-week="WED">
-                        <div class="info-wrap video">
-                            <div class="video-top">
-                                <div class="logo">
-                                    <!-- 사이트 로고 이미지 -->
-                                    <img src="/images/MuscleMatrixLogo.png"
-                                        style="width: 100%;max-width: 182px;">
-                                </div>
-                            </div>
-
-                            <div class="video-content tac" style="height: 360px;">
-                                <!-- 프로그램 이미지 -->
-                                <img class="image" src="/images/blank-image.png">
-                            </div>
-                        </div>
-                        <div class="info-wrap desc">
-                            <div class="info-desc-box">
-                                <div>운동효과: 전신</div>
-                                <div>운동부위: 전신</div>
-                                <div>목표 칼로리: 500 kcal</div>
-                                <div>운동명: 근성장^^</div>
-                            </div>
-                            <div class="info-video-list ">
-                                <div class="top-tit">운동프로그램</div>
-                                <div class="bot-list">
-                                    <div class="list-box">
-                                        <!-- 선택한것에 active클래스가 붙음 -->
-                                        <div class="select" data-num="1">
-                                            09:00~10:00<br> 파워 숨쉬기 운동
-                                            <div class="select-desc">
-                                                효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="2">
-                                            10:00~11:00<br> 체형 교정 스페셜
-                                            <div class="select-desc">
-                                                개인별 체형 분석 후 맞춤형 교정 운동을 배우는 특별 클래스
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="3">
-                                            13:00~14:00<br> 신나는 줄넘기 교실
-                                            <div class="select-desc">
-                                                다양한 줄넘기 기술을 배우며 즐겁게 유산소 운동하는 클래스
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="4">
-                                            17:00~18:00<br> 자세 교정 필라테스
-                                            <div class="select-desc">
-                                                코어 강화와 자세 교정에 중점을 둔 필라테스 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="5">
-                                            18:00~19:00<br> 탄탄 코어 만들기
-                                            <div class="select-desc">
-                                                다양한 복근 운동을 통해 코어 근력을 강화하는 집중 프로그램
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- 목요일 -->
-                    <div class="exe-info-wrap unactive" data-week="THU">
-                        <div class="info-wrap video">
-                            <div class="video-top">
-                                <div class="logo">
-                                    <!-- 사이트 로고 이미지 -->
-                                    <img src="/images/MuscleMatrixLogo.png"
-                                        style="width: 100%;max-width: 182px;">
-                                </div>
-                            </div>
-
-                            <div class="video-content tac" style="height: 360px;">
-                                <!-- 프로그램 이미지 -->
-                                <img class="image" src="/images/blank-image.png">
-                            </div>
-                        </div>
-                        <div class="info-wrap desc">
-                            <div class="info-desc-box">
-                                <div>운동효과: 지방 폭발</div>
-                                <div>운동부위: 전신</div>
-                                <div>목표 칼로리: 500 kcal</div>
-                                <div>운동명: 오늘은 어떤 루틴으로??</div>
-                            </div>
-                            <div class="info-video-list ">
-                                <div class="top-tit">운동프로그램</div>
-                                <div class="bot-list">
-                                    <div class="list-box">
-                                        <!-- 선택한것에 active클래스가 붙음 -->
-                                        <div class="select" data-num="1">
-                                            09:00~10:00<br> 파워 숨쉬기 운동
-                                            <div class="select-desc">
-                                                효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="2">
-                                            10:00~11:00<br> 사이클링 & 힐링
-                                            <div class="select-desc">
-                                                다양한 강도와 속도로 진행되는 실내 사이클링 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="3">
-                                            13:00~14:00<br> 자세 교정 필라테스
-                                            <div class="select-desc">
-                                                코어 강화와 자세 교정에 중점을 둔 필라테스 수업
-                                            </div>
-                                        </div>
-
-                                        <div class="select" data-num="4">
-                                            17:00~18:00<br> 탄탄 코어 만들기
-                                            <div class="select-desc">
-                                                다양한 복근 운동을 통해 코어 근력을 강화하는 집중 프로그램
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- 금요일 -->
-                    <div class="exe-info-wrap unactive" data-week="FRI">
-                        <div class="info-wrap video">
-                            <div class="video-top">
-                                <div class="logo">
-                                    <!-- 사이트 로고 이미지 -->
-                                    <img src="/images/MuscleMatrixLogo.png"
-                                        style="width: 100%;max-width: 182px;">
-                                </div>
-                            </div>
-
-                            <div class="video-content tac" style="height: 360px;">
-                                <!-- 프로그램 이미지 -->
-                                <img class="image" src="/images/blank-image.png">
-
-                            </div>
-                        </div>
-                        <div class="info-wrap desc">
-                            <div class="info-desc-box">
-                                <!-- 해당요일의 운동목표 등 -->
-                                <div>운동효과: 전신트레이닝</div>
-                                <div>운동부위: 전신</div>
-                                <div>목표 칼로리: 500 kcal</div>
-                                <div>운동명: 불금은 헬스클럽</div>
-                            </div>
-                            <div class="info-video-list ">
-                                <div class="top-tit">운동프로그램</div>
-                                <div class="bot-list">
-                                    <!-- 운동 영상 리스트 -->
-                                    <div class="list-box">
-                                        <!-- 선택한것이 active클래스가 붙음 -->
-                                        <div class="select" data-num="1">
-                                            09:00~10:00<br> 아침을 깨우는 요가 스트레칭
-                                            <div class="select-desc">
-                                                간단한 요가 동작으로 몸을 깨우고 하루를 활기차게 시작하는 수업 </div>
-                                        </div>
-
-                                        <div class="select" data-num="2">
-                                            10:00~11:00<br> 자세 교정 필라테스
-                                            <div class="select-desc">
-                                                코어 강화와 자세 교정에 중점을 둔 필라테스 수업 </div>
-                                        </div>
-
-                                        <div class="select" data-num="3">
-                                            13:00~14:00<br> 탄탄 코어 만들기
-                                            <div class="select-desc">
-                                                다양한 복근 운동을 통해 코어 근력을 강화하는 집중 프로그램 </div>
-                                        </div>
-
-                                        <div class="select" data-num="4">
-                                            17:00~18:00<br> 사이클링 & 힐링
-                                            <div class="select-desc">
-                                                다양한 강도와 속도로 진행되는 실내 사이클링 수업 </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
-            </div>
-        </section>
-				<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
-				
-    </div>
+	<div class="wrapper">
+		<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
+
+		<div class="page-header background7"
+			data-stellar-background-ratio="0.4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 page-header-wrapper">
+						<div class="top-sub-title">Program</div>
+						<div class="top-sub-desc">프로그램</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="md-margin2x"></div>
+
+
+
+
+
+		<section class="content this" role="main">
+			<div class="container">
+				<div class="row this">
+					<div class="col-lg-12 text-center">
+						<h4 style="color: #FF4C4C;">Weekly Exercise Schedule</h4>
+						<div
+							style="width: 35px; border-bottom: 3px solid #FF4C4C; margin-left: 49%;"></div>
+					</div>
+				</div>
+
+
+				<div class="row app-pro-box">
+					<span class="media-wrap view-one"> <span
+						class="media-info-box"> <span class="content"> <span
+								class="sub-content"> <span class="sub-header fcff4c"><img
+										src="https://www.bodychannel.co.kr/dist/img/program/app_grap_img1.png"
+										class="mWt100p" style="max-width: 385px;"></span> <span
+									class="sub-txt" style="text-align: left;">
+										<p class="mb15 fs25 fw7">5개의 심장박동 구역</p>
+										<p class="mb5 fs14 fw6">웨어러블을 손목에 착용한 후 운동 진행 시 심박수 수치와
+											칼로리 소모량이 실시간으로 화면에 연동되어 5가지 색상으로 표시됩니다. 500칼로리 소모 목표를 달성해보세요.</p>
+										<p class="mb0 fs14 fw6">GroupP.T 주간 운동 일정표는 전지점 통합적으로 제공되는
+											운동 프로그램으로 app을 통해 운동예약시 지점에서 동일한 프로그램의 그룹수업을 받을 수 있습니다. 주간
+											운동목표와 운동영상을 보며 운동을 배워보시고, 지점을 나올 수 없을때 집에서 홈트레이닝 용도로 사용해 보세요.
+										</p>
+
+
+								</span>
+							</span>
+						</span>
+					</span> <span class="media-video-box view-two"> <span
+							class="first-tile">
+								<div class="play">
+									<div class="play-control"></div>
+									<img src="/images/program-img.png" style="width: 100%;">
+								</div>
+						</span> <span class="second-tile img-bg-7"
+							style="border-right: 1px solid #fff;"></span> <span
+							class="second-tile img-bg-8"></span>
+					</span>
+
+					</span>
+				</div>
+				<div class="row program_type mt5p">
+					<div
+						class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center bgcff4">
+						<span style="color: #fff;">Group P.T</span>
+					</div>
+
+				</div>
+				<div class="row pro-app-wrap">
+					<!-- 날짜 탭-->
+					<div class="date-tab-wrap">
+						<ul>
+							<!-- 선택된것은 active가 붙음 -->
+							<li class="date-tab active">
+								<div class="day" data-week="MON">MON</div>
+
+							</li>
+							<li class="date-tab ">
+								<div class="day" data-week="TUE">TUE</div>
+
+							</li>
+							<li class="date-tab ">
+								<div class="day" data-week="WED">WED</div>
+
+							</li>
+							<li class="date-tab ">
+								<div class="day" data-week="THU">THU</div>
+
+							</li>
+							<li class="date-tab">
+								<div class="day" data-week="FRI">FRI</div>
+
+							</li>
+						</ul>
+					</div>
+
+					<!-- 운동프로그램 -->
+
+
+					<!-- 월요일 -->
+					<!-- 선택된것은 active 클래스가 붙음 -->
+					<!-- 아닌것은 unactive되서 안보임 -->
+					<div class="exe-info-wrap active" data-week="MON">
+						<div class="info-wrap video">
+							<div class="video-top">
+								<div class="logo">
+									<!-- 사이트 로고 이미지 -->
+									<img src="/images/MuscleMatrixLogo.png"
+										style="width: 100%; max-width: 182px;">
+								</div>
+							</div>
+
+							<div class="video-content tac" style="height: 360px;">
+								<!-- 프로그램 이미지 -->
+								<img class="image" src="/images/blank-image.png">
+							</div>
+						</div>
+						<div class="info-wrap desc">
+							<div class="info-desc-box">
+								<div>운동효과: 하체/힙/코어</div>
+								<div>운동부위: 전신</div>
+								<div>목표 칼로리: 500 kcal</div>
+								<div>운동명: 날이 좋네요^^</div>
+							</div>
+							<div class="info-video-list ">
+								<div class="top-tit">운동프로그램</div>
+								<div class="bot-list">
+									<div class="list-box">
+										<!-- 선택한것에 active클래스가 붙음 -->
+										<div class="select active" data-num="1">
+											아침을 깨우는 요가 스트레칭
+											<div class="select-desc">간단한 요가 동작으로 몸을 깨우고 하루를 활기차게
+												시작하는 수업</div>
+										</div>
+
+										<div class="select" data-num="2">
+											탄탄 코어 만들기
+											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
+												프로그램</div>
+										</div>
+
+										<div class="select" data-num="3">
+											자세 교정 필라테스
+											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
+										</div>
+
+										<div class="select" data-num="4">
+											신나는 줄넘기 교실
+											<div class="select-desc">다양한 줄넘기 기술을 배우며 즐겁게 유산소 운동하는
+												클래스</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 화요일 -->
+					<div class="exe-info-wrap unactive" data-week="TUE">
+						<div class="info-wrap video">
+							<div class="video-top">
+								<div class="logo">
+									<!-- 사이트 로고 이미지 -->
+									<img src="/images/MuscleMatrixLogo.png"
+										style="width: 100%; max-width: 182px;">
+								</div>
+							</div>
+
+							<div class="video-content tac" style="height: 360px;">
+								<!-- 프로그램 이미지 -->
+								<img class="image" src="/images/blank-image.png">
+							</div>
+						</div>
+						<div class="info-wrap desc">
+							<div class="info-desc-box">
+								<div>운동효과: 전신</div>
+								<div>운동부위: 전신</div>
+								<div>목표 칼로리: 500 kcal</div>
+								<div>운동명: 고강도의 유산소 운동 GO!!</div>
+							</div>
+							<div class="info-video-list ">
+								<div class="top-tit">운동프로그램</div>
+								<div class="bot-list">
+									<div class="list-box">
+										<!-- 선택한것에 active클래스가 붙음 -->
+										<div class="select" data-num="1">
+											아침 활력 충전소
+											<div class="select-desc">가볍고 효과적인 아침 운동으로 하루를 활기차게 시작하는
+												클래스</div>
+										</div>
+
+										<div class="select" data-num="2">
+											자세 교정 필라테스
+											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
+										</div>
+
+										<div class="select" data-num="3">
+											근력 UP! 체지방 DOWN!
+											<div class="select-desc">근력 운동과 유산소 운동을 병행하여 체지방 감소에
+												초점을 맞춘 프로그램</div>
+										</div>
+
+										<div class="select" data-num="4">
+											탄탄 코어 만들기
+											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
+												프로그램</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 수요일 -->
+					<div class="exe-info-wrap unactive" data-week="WED">
+						<div class="info-wrap video">
+							<div class="video-top">
+								<div class="logo">
+									<!-- 사이트 로고 이미지 -->
+									<img src="/images/MuscleMatrixLogo.png"
+										style="width: 100%; max-width: 182px;">
+								</div>
+							</div>
+
+							<div class="video-content tac" style="height: 360px;">
+								<!-- 프로그램 이미지 -->
+								<img class="image" src="/images/blank-image.png">
+							</div>
+						</div>
+						<div class="info-wrap desc">
+							<div class="info-desc-box">
+								<div>운동효과: 전신</div>
+								<div>운동부위: 전신</div>
+								<div>목표 칼로리: 500 kcal</div>
+								<div>운동명: 근성장^^</div>
+							</div>
+							<div class="info-video-list ">
+								<div class="top-tit">운동프로그램</div>
+								<div class="bot-list">
+									<div class="list-box">
+										<!-- 선택한것에 active클래스가 붙음 -->
+										<div class="select" data-num="1">
+											파워 숨쉬기 운동
+											<div class="select-desc">효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
+											</div>
+										</div>
+
+										<div class="select" data-num="2">
+											체형 교정 스페셜
+											<div class="select-desc">개인별 체형 분석 후 맞춤형 교정 운동을 배우는 특별
+												클래스</div>
+										</div>
+
+										<div class="select" data-num="3">
+											신나는 줄넘기 교실
+											<div class="select-desc">다양한 줄넘기 기술을 배우며 즐겁게 유산소 운동하는
+												클래스</div>
+										</div>
+
+										<div class="select" data-num="4">
+											자세 교정 필라테스
+											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
+										</div>
+
+										<div class="select" data-num="5">
+											탄탄 코어 만들기
+											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
+												프로그램</div>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- 목요일 -->
+					<div class="exe-info-wrap unactive" data-week="THU">
+						<div class="info-wrap video">
+							<div class="video-top">
+								<div class="logo">
+									<!-- 사이트 로고 이미지 -->
+									<img src="/images/MuscleMatrixLogo.png"
+										style="width: 100%; max-width: 182px;">
+								</div>
+							</div>
+
+							<div class="video-content tac" style="height: 360px;">
+								<!-- 프로그램 이미지 -->
+								<img class="image" src="/images/blank-image.png">
+							</div>
+						</div>
+						<div class="info-wrap desc">
+							<div class="info-desc-box">
+								<div>운동효과: 지방 폭발</div>
+								<div>운동부위: 전신</div>
+								<div>목표 칼로리: 500 kcal</div>
+								<div>운동명: 오늘은 어떤 루틴으로??</div>
+							</div>
+							<div class="info-video-list ">
+								<div class="top-tit">운동프로그램</div>
+								<div class="bot-list">
+									<div class="list-box">
+										<!-- 선택한것에 active클래스가 붙음 -->
+										<div class="select" data-num="1">
+											파워 숨쉬기 운동
+											<div class="select-desc">효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
+											</div>
+										</div>
+
+										<div class="select" data-num="2">
+											사이클링 & 힐링
+											<div class="select-desc">다양한 강도와 속도로 진행되는 실내 사이클링 수업</div>
+										</div>
+
+										<div class="select" data-num="3">
+											자세 교정 필라테스
+											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
+										</div>
+
+										<div class="select" data-num="4">
+											탄탄 코어 만들기
+											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
+												프로그램</div>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- 금요일 -->
+					<div class="exe-info-wrap unactive" data-week="FRI">
+						<div class="info-wrap video">
+							<div class="video-top">
+								<div class="logo">
+									<!-- 사이트 로고 이미지 -->
+									<img src="/images/MuscleMatrixLogo.png"
+										style="width: 100%; max-width: 182px;">
+								</div>
+							</div>
+
+							<div class="video-content tac" style="height: 360px;">
+								<!-- 프로그램 이미지 -->
+								<img class="image" src="/images/blank-image.png">
+
+							</div>
+						</div>
+						<div class="info-wrap desc">
+							<div class="info-desc-box">
+								<!-- 해당요일의 운동목표 등 -->
+								<div>운동효과: 전신트레이닝</div>
+								<div>운동부위: 전신</div>
+								<div>목표 칼로리: 500 kcal</div>
+								<div>운동명: 불금은 헬스클럽</div>
+							</div>
+							<div class="info-video-list ">
+								<div class="top-tit">운동프로그램</div>
+								<div class="bot-list">
+									<!-- 운동 영상 리스트 -->
+									<div class="list-box">
+										<!-- 선택한것이 active클래스가 붙음 -->
+										<div class="select" data-num="1">
+											아침을 깨우는 요가 스트레칭
+											<div class="select-desc">간단한 요가 동작으로 몸을 깨우고 하루를 활기차게
+												시작하는 수업</div>
+										</div>
+
+										<div class="select" data-num="2">
+											자세 교정 필라테스
+											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
+										</div>
+
+										<div class="select" data-num="3">
+											탄탄 코어 만들기
+											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
+												프로그램</div>
+										</div>
+
+										<div class="select" data-num="4">
+											사이클링 & 힐링
+											<div class="select-desc">다양한 강도와 속도로 진행되는 실내 사이클링 수업</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+				</div>
+			</div>
+		</section>
+		<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
+
+	</div>
 
 
 </body>
