@@ -55,7 +55,7 @@ function updateUI() {
 }
 
 function updateImageSrc() {
-    const imgSrc = `../../staticfiles/images/${currentWeek}/K-00${currentNum}.png`;
+    const imgSrc = `/images/${currentWeek}/K-00${currentNum}.png`;
     const activeImage = document.querySelector('.exe-info-wrap.active .image');
     if (activeImage) {
         activeImage.setAttribute('src', imgSrc);

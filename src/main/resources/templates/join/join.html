@@ -1,102 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/join/join.css" />
-    <link rel="stylesheet" href="/css/main/header.css" />
-    <link rel="stylesheet" href="/css/main/header.css" data-whatIsThis="헤더CSS임포트" />
-		<link rel="stylesheet" href="/css/main/footer.css" data-whatIsThis="푸터CSS임포트" />
-    
-  </head>
-  <body>
-  	
-    <div class="join-allwrap">
-    	<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
-    	
-      <div class="join-title-wrap" style="background-position: center center">
-        <div class="join-title-container">
-          <div class="join-title-row">
-            <div class="join-title-letterwrap">
-              <div class="join-title-realtitle">REGISTER</div>
-              <div class="join-title-subtitle">회원가입</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="margin"></div>
-      <section class="join-content-wrap">
-        <div class="join-content-div">
-          <section>
-            <div style="margin: 0 auto; max-width: 800px; width: 100%">
-              <div class="join-content-title-wrap">
-                MuscleMatrix 회원가입에 필요한 정보를 입력해주세요.<br />
-                회원정보는 동의 없이 공개 및 유출되지 않으며 개인정보 보호정책에
-                의해 보호 받고 있습니다.
-              </div>
-              <div class="join-info-wrap">
-                <div class="join-info-fd">회원정보 입력</div>
-                <div class="join-info-sd">
-                  <div class="join-info-sdfd">
-                    이메일(ID) <span class="important">*</span>
-                  </div>
-                  <div class="join-info-sdsd">
-                    <input type="text" class="join-info-email" />
-                  </div>
-                </div>
-                <div class="join-info-td">
-                  <div class="join-info-tdfd">
-                    이름 <span class="important">*</span>
-                  </div>
-                  <div class="join-info-sdsd">
-                    <input type="text" class="join-info-email" />
-                  </div>
-                </div>
-                <div class="join-info-td">
-                  <div class="join-info-tdfd">
-                    비밀번호 <span class="important">*</span>
-                  </div>
-                  <div class="join-info-sdsd">
-                    <input type="password" class="join-info-email" />
-                  </div>
-                </div>
-                <div class="join-info-fod">
-                  <div class="join-info-fodfd">성별</div>
-                  <div class="join-info-fodsd">
-                    <label class="join-info-fradiowrap">
-                      <input
-                        type="radio"
-                        class="join-info-firstradio"
-                        name="gender"
-                      />
-                      <span class="join-info-sex">남</span>
-                    </label>
-                    <label class="join-info-fradiowrap left-margin">
-                      <input
-                        type="radio"
-                        class="join-info-firstradio"
-                        name="gender"
-                      />
-                      <span class="join-info-sex">여</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="sumit-btn-wrap">
-                  <button type="button" class="sumit-btn">가입하기</button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-    	<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
-    	
-    </div>
-  </body>
-  <script src="/js/join/join.js"></script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/css/join/join.css" />
+<link rel="stylesheet" href="/css/main/header.css" />
+<link rel="stylesheet" href="/css/main/header.css"
+	data-whatIsThis="헤더CSS임포트" />
+<link rel="stylesheet" href="/css/main/footer.css"
+	data-whatIsThis="푸터CSS임포트" />
+
+</head>
+<body>
+
+	<div class="join-allwrap">
+		<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
+
+		<div class="join-title-wrap"
+			style="background-position: center center">
+			<div class="join-title-container">
+				<div class="join-title-row">
+					<div class="join-title-letterwrap">
+						<div class="join-title-realtitle">REGISTER</div>
+						<div class="join-title-subtitle">회원가입</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="margin"></div>
+		<form action="/join/join" method="post">
+			<section class="join-content-wrap">
+				<div class="join-content-div">
+					<section>
+						<div style="margin: 0 auto; max-width: 800px; width: 100%">
+							<div class="join-content-title-wrap">
+								MuscleMatrix 회원가입에 필요한 정보를 입력해주세요.<br /> 회원정보는 동의 없이 공개 및 유출되지
+								않으며 개인정보 보호정책에 의해 보호 받고 있습니다.
+							</div>
+							<div class="join-info-wrap">
+								<div class="join-info-fd">회원정보 입력</div>
+								<div class="join-info-sd">
+									<div class="join-info-sdfd">
+										이메일(ID) <span class="important">*</span>
+									</div>
+									<div class="join-info-sdsd">
+										<input type="text" class="join-info-email" name="membership_email"/>
+									</div>
+								</div>
+								<div class="join-info-td">
+									<div class="join-info-tdfd">
+										이름 <span class="important">*</span>
+									</div>
+									<div class="join-info-sdsd">
+										<input type="text" class="join-info-email" name="membership_name"/>
+									</div>
+								</div>
+								<div class="join-info-td">
+									<div class="join-info-tdfd">
+										비밀번호 <span class="important">*</span>
+									</div>
+									<div class="join-info-sdsd">
+										<input type="password" class="join-info-email" name="membership_password"/>
+									</div>
+								</div>
+								<div class="join-info-fod">
+									<div class="join-info-fodfd">성별</div>
+									<div class="join-info-fodsd">
+										<label class="join-info-fradiowrap"> <input
+											type="radio" class="join-info-firstradio" name="membership_gender" value="남자"/>
+											<span class="join-info-sex">남</span>
+										</label> <label class="join-info-fradiowrap left-margin"> <input
+											type="radio" class="join-info-firstradio" name="membership_gender" value="여자"/>
+											<span class="join-info-sex">여</span>
+										</label>
+									</div>
+								</div>
+								<div class="sumit-btn-wrap">
+									<button type="submit" class="sumit-btn">가입하기</button>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+		</form>
+		<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
+	</div>
+</body>
+<script src="/js/join/join.js"></script>
 </html>

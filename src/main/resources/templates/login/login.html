@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/login/login.css" />
-  </head>
-  <body>
-    <section>
-      <div class="login-wrap">
-        <div class="login-head">
-          <div class="login-logo">
-            <img src="/images/MuscleMatrixLogo.png" />
-          </div>
-          <div class="login-logo-text">
-            언제, 어디서나, 누구나 즐겁게! 당신의 피트니스 파트너
-          </div>
-        </div>
-        <div class="login-box">
-          <div class="login-title">LOGIN</div>
-          <div class="login-subtitle">
-            회원전용 페이지 입니다. 로그인 후 이용하세요.
-          </div>
-          <div class="login-id-wrap">
-            <input class="login-id" type="text" placeholder="이메일 ID" />
-          </div>
-          <div class="login-pw-wrap">
-            <input class="login-pw" type="password" placeholder="비밀번호" />
-          </div>
-          <div class="login-button-wrap">
-            <button class="login-button" type="button">로그인</button>
-          </div>
-          <div class="join-wrap">
-            <a href="#" class="join">회원가입</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/css/login/login.css" />
+</head>
+<body>
+	<section>
+		<div class="login-wrap">
+			<div class="login-head">
+				<div class="login-logo">
+					<img src="/images/MuscleMatrixLogo.png" />
+				</div>
+				<div class="login-logo-text">언제, 어디서나, 누구나 즐겁게! 당신의 피트니스 파트너</div>
+			</div>
+			<form action="/login/login" method="post">
+				<div class="login-box">
+					<div class="login-title">LOGIN</div>
+					<div class="login-subtitle" th:if="${exist == 2}">아이디나 비밀번호를
+						확인해주세요.</div>
+					<div class="login-subtitle" th:if="${exist == 1}">이미 가입한
+						email 아이디입니다.</div>
+					<div class="login-subtitle" th:if="${exist == 0}">
+						MuscleMatrix 회원가입 성공!!</div>
+					<div class="login-id-wrap">
+						<input class="login-id" type="text" placeholder="이메일 ID"
+							name="membership_email" />
+					</div>
+					<div class="login-pw-wrap">
+						<input class="login-pw" type="password" placeholder="비밀번호"
+							name="membership_password" />
+					</div>
+					<div class="login-button-wrap">
+						<button class="login-button" type="submit">로그인</button>
+					</div>
+					<div class="join-wrap">
+						<a th:href="@{/join/join}" class="join">회원가입</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+</body>
 </html>
