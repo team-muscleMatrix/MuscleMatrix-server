@@ -18,7 +18,7 @@
           <nav class="header-wrap-nav">
             <div class="header-container">
               <div class="logo-wrap">
-                <a class="real-logo-link">
+                <a th:href="@{/}" class="real-logo-link">
                   <img
                     src="/images/MuscleMatrixLogo.png"
                     class="logo-img"
@@ -30,19 +30,19 @@
               <div class="letter-wrap">
                 <ul class="letter-wrap-ul">
                   <li class="letter-realwrap-li">
-                    <a class="letter-wrap-link">MUSCLEMATRIX</a>
+                    <a th:href="@{/musclematrix/musclematrix}" class="letter-wrap-link">MUSCLEMATRIX</a>
                   </li>
                   <li class="letter-realwrap-li">
-                    <a class="letter-wrap-link">HEALTH</a>
+                    <a th:href="@{/health/health}" class="letter-wrap-link">HEALTH</a>
                   </li>
                   <li class="letter-realwrap-li">
-                    <a class="letter-wrap-link">교육과정</a>
+                    <a th:href="@{/class/class}" class="letter-wrap-link">교육과정</a>
                   </li>
                   <li class="letter-realwrap-li">
-                    <a class="letter-wrap-link">PT 무료체험</a>
+                    <a th:href="@{/apply/apply}" class="letter-wrap-link">PT 무료체험</a>
                   </li>
                   <li class="letter-realwrap-li">
-                    <a class="letter-wrap-link">이벤트 프로그램</a>
+                    <a th:href="@{/program/program}" class="letter-wrap-link">이벤트 프로그램</a>
                   </li>
                 </ul>
               </div>
