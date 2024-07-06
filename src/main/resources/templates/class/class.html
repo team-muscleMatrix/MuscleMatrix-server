@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/class/class.css" />
     <link rel="stylesheet" href="/css/main/header.css" data-whatIsThis="헤더CSS임포트" />
 		<link rel="stylesheet" href="/css/main/footer.css" data-whatIsThis="푸터CSS임포트" />
-    
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>교육 과정</title>
 </head>
 
@@ -228,11 +228,14 @@
                         </div>
                     </div>
 
+						
 
                     <!-- 강사를  3개씩  나열-->
                     <div class="row marginTop30">
 
-                        <!--  -->
+                        <!-- 모델에 담긴 값을 가져옴 -->
+                        <th:block th:each="tvd: ${tvds}">
+                        
                         <div class="col-lg-4 text-center padding30">
                             <img src="https://www.bodychannel.co.kr/dist/img/teacher_5.png" class="width50P">
                             <div class="teacher_name">
@@ -252,8 +255,10 @@
                                 <li class="content">약력2</li>
                             </ul>
                         </div>
+                        </th:block>
 
                     </div>
+
 
                     <!-- 강사를  3개씩  나열-->
                     <div class="row marginBoth30">

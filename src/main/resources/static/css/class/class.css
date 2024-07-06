@@ -684,7 +684,16 @@ a {
     background: transparent;
 }
 
-
+.teacher_program {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 100%;
+    flex-basis: calc(33.33% - 20px);
+    text-align: center;
+    white-space: nowrap;
+/*     overflow: hidden; */
+    text-overflow: ellipsis;
+}
 
 
 
