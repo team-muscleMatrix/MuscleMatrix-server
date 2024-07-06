@@ -18,7 +18,6 @@ public class Event extends Period{
 	private long event_id;
 	private String event_name;
 	private String event_content;
-	private String event_profile;
 	
 	// 1:월, 2:화, 3:수, 4:목, 5:금
 	private int event_status;
