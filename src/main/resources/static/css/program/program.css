@@ -877,8 +877,7 @@ audio, canvas, progress, video {
 
 .pro-app-wrap > .exe-info-wrap > .info-wrap.video > .video-top > div.logo {
     position: absolute;
-    left: 1rem;
-    top: 12px;
+    top: 8px;
 }
 
 .tac {
@@ -895,7 +894,7 @@ audio, canvas, progress, video {
     align-items: center; /* 수직 가운데 정렬 */
     height: 360px; /* 기존 높이 유지 */
     padding: 1rem 0;
-    padding-top: 60px; 
+    padding-top: 30px; 
 }
 
 .pro-app-wrap > .exe-info-wrap > .info-wrap.desc {
@@ -974,8 +973,8 @@ audio, canvas, progress, video {
 
 .image{
     padding: auto;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 
