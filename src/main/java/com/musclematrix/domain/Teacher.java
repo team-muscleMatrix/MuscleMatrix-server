@@ -16,7 +16,7 @@ public class Teacher extends Period{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long teacher_id;
 	
-	private String teacher__name;
+	private String teacher_name;
 	private String teacher_profile;
 	private String teacher_KAKAOLINK;
 	private int teacher_STATUS = 1; //근무중

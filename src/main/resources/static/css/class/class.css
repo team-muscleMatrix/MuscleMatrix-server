@@ -695,7 +695,18 @@ a {
     text-overflow: ellipsis;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px; /* 네거티브 마진을 사용하여 자식 요소의 패딩을 상쇄 */
+}
 
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 15px; /* 각 열 사이의 간격 */
+  box-sizing: border-box;
+}
 
 
 
