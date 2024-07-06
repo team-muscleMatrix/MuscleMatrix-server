@@ -685,7 +685,7 @@ a {
 }
 
 .teacher_program {
-    background-color: #f0f0f0;
+    background-color: #c0bcbc;
     padding: 5px 10px;
     border-radius: 100%;
     flex-basis: calc(33.33% - 20px);
@@ -698,7 +698,6 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px; /* 네거티브 마진을 사용하여 자식 요소의 패딩을 상쇄 */
 }
 
 .col-lg-4 {

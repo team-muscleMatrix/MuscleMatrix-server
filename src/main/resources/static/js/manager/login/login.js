@@ -29,19 +29,24 @@ const id = document.querySelector(".main-login-id");
 const pw = document.querySelector(".main-login-pw");
 const modal = document.querySelector("#admin-message-modal");
 const backmodal = document.querySelector("#admin-message-modal-backdrop");
-
 const canclebutton = document.querySelector(".admin-message-modal-left-button");
 
-button.addEventListener("click", () => {
-  // 임시? 아이디비번
-  if ((id.value === "Glowriters", pw.value === "1234")) {
-    // 페이지 나오면 페이지이동 url
-    window.location.href = "";
-    return;
-  }
-  modal.classList.remove("hidden");
-  backmodal.classList.remove("hidden");
+//일치하면 POST전송
+button.addEventListener("click", (event) => {
+	//관리자 아이디 비번
+	if ((id.value === "MuscleMatrix" && pw.value === "1234")) {
+		console.log("일치했다 " + id.value + " , " + pw.value)
+		//일치하면 폼 전송
+		document.getElementById("loginForm").submit();
+		return;
+	}
+	console.log("일치하지 않음 " + id.value + " , " + pw.value)
+	modal.classList.remove("hidden");
+	backmodal.classList.remove("hidden");
+	event.preventDefault(); // 폼 제출 방지
 });
+
+
 
 canclebutton.addEventListener("click", () => {
   modal.classList.add("hidden");
