@@ -13,7 +13,7 @@ import lombok.Setter;
 public class TeacherDTO {
 	//teacher
 	private long teacher_id;
-	private String teacher__name;
+	private String teacher_name;
 	private String teacher_profile;
 	private String teacher_KAKAOLINK; //카카오톡 오픈채팅방 링크
 	private int teacher_STATUS;

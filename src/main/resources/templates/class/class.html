@@ -238,21 +238,24 @@
                         
                         <div class="col-lg-4 text-center padding30">
                             <img src="https://www.bodychannel.co.kr/dist/img/teacher_5.png" class="width50P">
-                            <div class="teacher_name">
+                            <div class="teacher_name" th:text="tvd.getTeacher_name()">
                                 강사 이름
                             </div>
 
                             <div class="teacher_program_container">
-                                <div class="teacher_program">
-                                    운영하는 프로그램
+                            	<th:block th:each="program : ${tvd.getPrograms()}">
+                                <div class="teacher_program" th:text="program.getProgram_content())">
+                                	운영하는 프로그램
                                 </div>
+                               </th:block>
                             </div>
 
                             <ul class="teacher_intro this">
-                                <li class="content">약력1</li>
-                                <li class="content">약력2</li>
-                                <li class="content">약력1dddddddddddddddddddddddddddddddddddddddddddddddddd</li>
-                                <li class="content">약력2</li>
+                            	<th:block th:each="history : ${tvd.getHistorys()}">
+                                <li class="content" th:text="history.getContent()">
+                                	약력
+                                </li>
+                            	</th:block>
                             </ul>
                         </div>
                         </th:block>
@@ -260,41 +263,41 @@
                     </div>
 
 
-                    <!-- 강사를  3개씩  나열-->
-                    <div class="row marginBoth30">
-                        <!--  -->
-                        <div class="col-lg-4 text-center padding30">
-                            <img src="https://www.bodychannel.co.kr/dist/img/teacher_5.png" class="width50P">
-                            <div class="teacher_name">
-                                강사 이름
-                            </div>
+<!--                     강사를  3개씩  나열 -->
+<!--                     <div class="row marginBoth30"> -->
+<!--                          -->
+<!--                         <div class="col-lg-4 text-center padding30"> -->
+<!--                             <img src="https://www.bodychannel.co.kr/dist/img/teacher_5.png" class="width50P"> -->
+<!--                             <div class="teacher_name"> -->
+<!--                                 강사 이름 -->
+<!--                             </div> -->
 
-                            <div class="teacher_program_container">
-                                <div class="teacher_program">
-                                    운영하는 프로그램1
-                                </div>
-                                <div class="teacher_program">
-                                    운영하는 프로그램2
-                                </div>
-                                <div class="teacher_program">
-                                    운영하는 프로그램2
-                                </div>
-                                <div class="teacher_program">
-                                    예시:데드리프트
-                                </div>
-                                <div class="teacher_program">
-                                    예시: ??
-                                </div>
-                            </div>
+<!--                             <div class="teacher_program_container"> -->
+<!--                                 <div class="teacher_program"> -->
+<!--                                     운영하는 프로그램1 -->
+<!--                                 </div> -->
+<!--                                 <div class="teacher_program"> -->
+<!--                                     운영하는 프로그램2 -->
+<!--                                 </div> -->
+<!--                                 <div class="teacher_program"> -->
+<!--                                     운영하는 프로그램2 -->
+<!--                                 </div> -->
+<!--                                 <div class="teacher_program"> -->
+<!--                                     예시:데드리프트 -->
+<!--                                 </div> -->
+<!--                                 <div class="teacher_program"> -->
+<!--                                     예시: ?? -->
+<!--                                 </div> -->
+<!--                             </div> -->
 
-                            <div class="teacher_intro this">
-                                약력
-                                <br>dkdk
-                                <br>아아
-                            </div>
-                        </div>
+<!--                             <div class="teacher_intro this"> -->
+<!--                                 약력 -->
+<!--                                 <br>dkdk -->
+<!--                                 <br>아아 -->
+<!--                             </div> -->
+<!--                         </div> -->
 
-                    </div>
+<!--                     </div> -->
 
 
                     <div class="text-center edu-brand-title">
