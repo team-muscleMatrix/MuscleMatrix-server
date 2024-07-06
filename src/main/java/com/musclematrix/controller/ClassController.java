@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.musclematrix.DTO.TeacherDTO;
+import com.musclematrix.domain.History;
+import com.musclematrix.domain.Program;
 import com.musclematrix.domain.Teacher;
 import com.musclematrix.service.HistoryService;
 import com.musclematrix.service.ProgramService;
@@ -31,8 +33,27 @@ public class ClassController extends BaseController{
 		
 		for (Teacher teacher : teachers) {
 			TeacherDTO tvd = new TeacherDTO();
+			long id = teacher.getTeacher_id();
+			
 			tvd.setTeacher_id(teacher.getTeacher_id());
-			tvd.setTeacher__name(teacher.getTeacher__name());
+			tvd.setTeacher_name(teacher.getTeacher_name());
+			tvd.setTeacher_profile(teacher.getTeacher_profile());
+			tvd.setTeacher_KAKAOLINK(teacher.getTeacher_KAKAOLINK());
+			
+			
+			List<History> historys = historyService.findAllByTeacherId(id);
+			List<Program> programs = programService.findAllByTeacherId(id);
+			
+			String historyBody = "";
+			for (History history : historys) {
+				historyBody += history.getHistory_content();
+				historyBody += "<br>";
+			}
+			
+			
+			
+			tvd.setHistoryBody(historyBody);
+			
 			
 			
 			
@@ -57,6 +78,7 @@ public class ClassController extends BaseController{
 		
 		
 		return "/class/class";
+//		return "/";
 	}
 	
 
