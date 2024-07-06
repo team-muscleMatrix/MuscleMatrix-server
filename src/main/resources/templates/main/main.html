@@ -1,400 +1,302 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MuscleMatrix 메인페이지</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/main/main.css" />
-    <link rel="stylesheet" href="/css/main/header.css" data-whatIsThis="헤더CSS임포트" />
-  	<link rel="stylesheet" href="/css/main/footer.css" data-whatIsThis="푸터CSS임포트" />
-  </head>
-  
-  <body>
-    <div class="main-allwrap">
-    
-    	<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
-    
-      <section class="main-wrap-section">
-        <div
-          class="main-wrap-sectionDiv"
-          style="max-height: none; overflow: visible; height: 695px"
-        >
-          <div
-            class="main-wrap-sectionDivdiv"
-            style="
-              height: 100%;
-              max-height: none;
-              perspective: 200px;
-              backface-visibility: hidden;
-              transform-style: flat;
-            "
-          >
-            <ul
-              class="main-wrap-ul"
-              style="
-                display: block;
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                max-height: none;
-              "
-            >
-              <li
-                class="main-wrap-li"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  overflow: hidden;
-                  z-index: 18;
-                  visibility: hidden;
-                  opacity: 1;
-                  position: absolute;
-                  transform: matrix(1, 0, 0, 1, 0, 0);
-                  transform-origin: center center 0px;
-                "
-              >
-                <div class="main-li-div" style="width: 100%; height: 100%">
-                  <div
-                    class="main-real-mainbanner"
-                    style="
-                      background-color: rgba(0, 0, 0, 0);
-                      background-repeat: no-repeat;
-                      background-image: url(https://www.bodychannel.co.kr/dist/img/main/slide_bg_3.jpg);
-                      background-position: 50% 0%;
-                      width: 100%;
-                      height: 100%;
-                      opacity: 1;
-                      visibility: visible;
-                      background-size: 100% 100%;
-                    "
-                  ></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="video-wrap">
-            <div class="video-content-div">
-              <div class="video-letter-wrap">
-                <div>
-                  <span class="video-title">MuscleMatrix는</span>
-                </div>
-                <div><span class="video-content">당신과 함께</span>합니다.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="aboutus-wrap-section">
-        <header class="aboutus-header">
-          <h1 class="aboutus-title">24HOUR/7DAY 전지점 통합 회원권</h1>
-          <p class="aboutus-content">
-            MuscleMatrix is 24/7 open fitness club where you can use
-          </p>
-          <p class="aboutus-content">
-            integrated membership of all branches anytime and anywere.
-          </p>
-        </header>
-        <div class="aboutus-content-wrap">
-          <div class="row">
-            <div class="aboutus-content-div">
-              <div class="aboutus-content-divdiv">
-                <div class="aboutus-content-divdivdiv">
-                  <figure class="aboutus-content-figure">
-                    <div class="aboutus-figure-div firstap">
-                      <div class="aboutus-figure-icondiv">
-                        <img
-                          src="https://www.bodychannel.co.kr/dist/img/main/body_icon_1@2x.png"
-                          width="47"
-                          height="77"
-                        />
-                      </div>
-                      <div class="aboutus-textbox">
-                        <p class="small-title">BENEFIT 01</p>
-                        <p class="big-title">MuscleMatrix</p>
-                      </div>
-                    </div>
-                  </figure>
-                  <div class="back-div">
-                    <div class="back-divdiv">
-                      <div class="sys-box">
-                        <div class="sys-tit">MuscleMatrix CONCEPT</div>
-                        <div class="sys-icon">
-                          <img
-                            src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_5@2x.png"
-                            width="69"
-                            height="68"
-                          />
-                        </div>
-                        <div class="sys-desc">
-                          24시 연중무휴 전지점 통합회원권
-                        </div>
-                        <div class="sys-btn">
-                          <a href="#">
-                            <img
-                              src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
-                              width="154"
-                              height="44"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="aboutus-content-div">
-              <div class="aboutus-content-divdiv">
-                <div class="aboutus-content-divdivdiv">
-                  <figure class="aboutus-content-figure">
-                    <div class="aboutus-figure-div secondtap">
-                      <div class="aboutus-figure-icondiv">
-                        <img
-                          src="https://www.bodychannel.co.kr/dist/img/main/body_icon_5.png"
-                          width="47"
-                          height="77"
-                        />
-                      </div>
-                      <div class="aboutus-textbox">
-                        <p class="small-title">BENEFIT 02</p>
-                        <p class="big-title">HEALTH</p>
-                      </div>
-                    </div>
-                  </figure>
-                  <div class="back-div">
-                    <div class="back-divdiv">
-                      <div class="sys-box">
-                        <div class="sys-tit">5성급 호텔식 운동머신</div>
-                        <div class="sys-icon">
-                          <img
-                            src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_6.png"
-                            width="69"
-                            height="68"
-                          />
-                        </div>
-                        <div class="sys-desc">
-                          테크노짐, 매트릭스, 라이프 등 최상급 운동머신들이
-                          설치되어 있습니다.
-                        </div>
-                        <div class="sys-btn">
-                          <a href="#">
-                            <img
-                              src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
-                              width="154"
-                              height="44"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="aboutus-content-div">
-              <div class="aboutus-content-divdiv">
-                <div class="aboutus-content-divdivdiv">
-                  <figure class="aboutus-content-figure">
-                    <div class="aboutus-figure-div thirdtap">
-                      <div class="aboutus-figure-icondiv">
-                        <img
-                          src="https://www.bodychannel.co.kr/dist/img/main/body_icon_6.png"
-                          width="47"
-                          height="77"
-                        />
-                      </div>
-                      <div class="aboutus-textbox">
-                        <p class="small-title">BENEFIT 03</p>
-                        <p class="big-title">이벤트 프로그램</p>
-                      </div>
-                    </div>
-                  </figure>
-                  <div class="back-div">
-                    <div class="back-divdiv">
-                      <div class="sys-box">
-                        <div class="sys-tit">이벤트 프로그램</div>
-                        <div class="sys-icon">
-                          <img
-                            src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_7.png"
-                            width="69"
-                            height="68"
-                          />
-                        </div>
-                        <div class="sys-desc">
-                          매일 새롭게 제공되는 운동방법을 트레이닝 받을 수
-                          있습니다.
-                        </div>
-                        <div class="sys-btn">
-                          <a href="#">
-                            <img
-                              src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
-                              width="154"
-                              height="44"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="aboutus-content-div">
-              <div class="aboutus-content-divdiv">
-                <div class="aboutus-content-divdivdiv">
-                  <figure class="aboutus-content-figure">
-                    <div class="aboutus-figure-div ftap">
-                      <div class="aboutus-figure-icondiv">
-                        <img
-                          src="https://www.bodychannel.co.kr/dist/img/main/body_icon_7.png"
-                          width="47"
-                          height="77"
-                        />
-                      </div>
-                      <div class="aboutus-textbox">
-                        <p class="small-title">BENEFIT 04</p>
-                        <p class="big-title">교육과정</p>
-                      </div>
-                    </div>
-                  </figure>
-                  <div class="back-div">
-                    <div class="back-divdiv">
-                      <div class="sys-box">
-                        <div class="sys-tit">교육과정</div>
-                        <div class="sys-icon">
-                          <img
-                            src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_8.png"
-                            width="69"
-                            height="68"
-                          />
-                        </div>
-                        <div class="sys-desc">
-                          온라인으로 편리하게 PT 상담을 신청하세요.
-                        </div>
-                        <div class="sys-btn">
-                          <a href="#">
-                            <img
-                              src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
-                              width="154"
-                              height="44"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="space"></div>
-      </section>
-      <div class="MuscleMatrix-summary-wrap">
-        <div class="overlaybg"></div>
-        <div class="parallax-content">
-          <div class="letter-container">
-            <div
-              class="logo"
-              style="text-align: center; padding-bottom: 2.5rem"
-            >
-              <img
-                src="/images/MuscleMatrixLogo.png"
-                width="240"
-                height="60"
-              />
-            </div>
-            <div class="real-letter-wrap">
-              <div class="real-letter-wrapdiv">
-                <span class="count" th:text="${todayCount}">금일 가입자 수</span>
-                <div class="yellow-bar"></div>
-                <h3>
-                  <span class="countname">금일 가입자</span>
-                </h3>
-              </div>
-              <div class="real-letter-wrapdiv">
-                <span class="count" th:text="${totalCount}">누적 가입자 수</span>
-                <div class="yellow-bar"></div>
-                <h3>
-                  <span class="countname">누적 회원수</span>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="MuscleMatrix-health-wrap">
-        <div class="MuscleMatrix-health-container">
-          <div class="MuscleMatrix-health-containerDiv">
-            <h1 class="MuscleMatrix-title-letter" style="color: #fe474a">
-              MuscleMatrix 건강 캠페인
-            </h1>
-            <p class="MuscleMatrix-subtitle-letter">
-              MuscleMatrix는 지역 주민들의 건강과 삶의 질을 높이기 위해 힘쓰고
-              있습니다.
-            </p>
-            <div class="MuscleMatrix-first-icons">
-              <div class="left-icon">
-                <img
-                  src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon1.png"
-                />
-              </div>
-              <div class="left-icon">
-                <img
-                  src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon2.png"
-                />
-              </div>
-              <div class="left-icon">
-                <img
-                  src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon3.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="MuscleMatrix-service-wrap"
-        style="
-          background-image: url(https://www.bodychannel.co.kr/dist/img/marble_background.png);
-          background-size: cover;
-          padding: 50px 0 0;
-          margin-bottom: 100px;
-        "
-      >
-        <div class="MuscleMatrix-service-container">
-          <div class="MuscleMatrix-service-containerDiv">
-            <div class="MuscleMatrix-service-fD" style="margin-bottom: 50px">
-              <img src="https://www.bodychannel.co.kr/dist/img/bodyzone.png" />
-            </div>
-            <div class="MuscleMatrix-service-sD">
-              <div class="MuscleMatrix-service-sDfD">
-                웨어러블을 착용하고 주 3회 이상 출석,<br />
-                일일 500 Kcal 소모 목표를 달성해보세요!
-              </div>
-              <div class="MuscleMatrix-service-sDsD">
-                <span
-                  class="MuscleMatrix-service-fspan"
-                  style="float: right; margin-right: -300px"
-                  ><img
-                    src="https://www.bodychannel.co.kr/dist/img/hrm_graph.png"
-                /></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-    	<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
-    
-    </div>
-  
-  	
-  
-  </body>
-  <script src="/js/main/main.js"></script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<title>MuscleMatrix 메인페이지</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/css/main/main.css" />
+<link rel="stylesheet" href="/css/main/header.css"
+	data-whatIsThis="헤더CSS임포트" />
+<link rel="stylesheet" href="/css/main/footer.css"
+	data-whatIsThis="푸터CSS임포트" />
+
+</head>
+
+<body>
+	<div class="main-allwrap">
+
+		<div th:replace="~{main/header :: header}">헤더파일 가져오는곳</div>
+
+		<section class="main-wrap-section">
+			<div class="main-wrap-sectionDiv"
+				style="max-height: none; overflow: visible; height: 695px">
+				<div class="main-wrap-sectionDivdiv"
+					style="height: 100%; max-height: none; perspective: 200px; backface-visibility: hidden; transform-style: flat;">
+					<ul class="main-wrap-ul"
+						style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
+						<li class="main-wrap-li"
+							style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 1; position: absolute; transform: matrix(1, 0, 0, 1, 0, 0); transform-origin: center center 0px;">
+							<div class="main-li-div" style="width: 100%; height: 100%">
+								<div class="main-real-mainbanner"
+									style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(https://www.bodychannel.co.kr/dist/img/main/slide_bg_3.jpg); background-position: 50% 0%; width: 100%; height: 100%; opacity: 1; visibility: visible; background-size: 100% 100%;"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="video-wrap">
+					<div class="video-content-div">
+						<div class="video-letter-wrap">
+							<div>
+								<span class="video-title">MuscleMatrix는</span>
+							</div>
+							<div>
+								<span class="video-content">당신과 함께</span>합니다.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="aboutus-wrap-section">
+			<header class="aboutus-header">
+				<h1 class="aboutus-title">24HOUR/7DAY 전지점 통합 회원권</h1>
+				<p class="aboutus-content">MuscleMatrix is 24/7 open fitness
+					club where you can use</p>
+				<p class="aboutus-content">integrated membership of all branches
+					anytime and anywere.</p>
+			</header>
+			<div class="aboutus-content-wrap">
+				<div class="row">
+					<div class="aboutus-content-div">
+						<div class="aboutus-content-divdiv">
+							<div class="aboutus-content-divdivdiv">
+								<figure class="aboutus-content-figure">
+									<div class="aboutus-figure-div firstap">
+										<div class="aboutus-figure-icondiv">
+											<img
+												src="https://www.bodychannel.co.kr/dist/img/main/body_icon_1@2x.png"
+												width="47" height="77" />
+										</div>
+										<div class="aboutus-textbox">
+											<p class="small-title">BENEFIT 01</p>
+											<p class="big-title">MuscleMatrix</p>
+										</div>
+									</div>
+								</figure>
+								<div class="back-div">
+									<div class="back-divdiv">
+										<div class="sys-box">
+											<div class="sys-tit">MuscleMatrix CONCEPT</div>
+											<div class="sys-icon">
+												<img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_5@2x.png"
+													width="69" height="68" />
+											</div>
+											<div class="sys-desc">24시 연중무휴 전지점 통합회원권</div>
+											<div class="sys-btn">
+												<a th:href="@{/musclematrix/musclematrix}"> <img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
+													width="154" height="44" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutus-content-div">
+						<div class="aboutus-content-divdiv">
+							<div class="aboutus-content-divdivdiv">
+								<figure class="aboutus-content-figure">
+									<div class="aboutus-figure-div secondtap">
+										<div class="aboutus-figure-icondiv">
+											<img
+												src="https://www.bodychannel.co.kr/dist/img/main/body_icon_5.png"
+												width="47" height="77" />
+										</div>
+										<div class="aboutus-textbox">
+											<p class="small-title">BENEFIT 02</p>
+											<p class="big-title">HEALTH</p>
+										</div>
+									</div>
+								</figure>
+								<div class="back-div">
+									<div class="back-divdiv">
+										<div class="sys-box">
+											<div class="sys-tit">5성급 호텔식 운동머신</div>
+											<div class="sys-icon">
+												<img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_6.png"
+													width="69" height="68" />
+											</div>
+											<div class="sys-desc">테크노짐, 매트릭스, 라이프 등 최상급 운동머신들이 설치되어
+												있습니다.</div>
+											<div class="sys-btn">
+												<a th:href="@{/health/health}"> <img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
+													width="154" height="44" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutus-content-div">
+						<div class="aboutus-content-divdiv">
+							<div class="aboutus-content-divdivdiv">
+								<figure class="aboutus-content-figure">
+									<div class="aboutus-figure-div thirdtap">
+										<div class="aboutus-figure-icondiv">
+											<img
+												src="https://www.bodychannel.co.kr/dist/img/main/body_icon_6.png"
+												width="47" height="77" />
+										</div>
+										<div class="aboutus-textbox">
+											<p class="small-title">BENEFIT 03</p>
+											<p class="big-title">이벤트 프로그램</p>
+										</div>
+									</div>
+								</figure>
+								<div class="back-div">
+									<div class="back-divdiv">
+										<div class="sys-box">
+											<div class="sys-tit">이벤트 프로그램</div>
+											<div class="sys-icon">
+												<img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_7.png"
+													width="69" height="68" />
+											</div>
+											<div class="sys-desc">매일 새롭게 제공되는 운동방법을 트레이닝 받을 수 있습니다.
+											</div>
+											<div class="sys-btn">
+												<a th:href="@{/program/program}"> <img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
+													width="154" height="44" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutus-content-div">
+						<div class="aboutus-content-divdiv">
+							<div class="aboutus-content-divdivdiv">
+								<figure class="aboutus-content-figure">
+									<div class="aboutus-figure-div ftap">
+										<div class="aboutus-figure-icondiv">
+											<img
+												src="https://www.bodychannel.co.kr/dist/img/main/body_icon_7.png"
+												width="47" height="77" />
+										</div>
+										<div class="aboutus-textbox">
+											<p class="small-title">BENEFIT 04</p>
+											<p class="big-title">교육과정</p>
+										</div>
+									</div>
+								</figure>
+								<div class="back-div">
+									<div class="back-divdiv">
+										<div class="sys-box">
+											<div class="sys-tit">교육과정</div>
+											<div class="sys-icon">
+												<img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_icon_8.png"
+													width="69" height="68" />
+											</div>
+											<div class="sys-desc">온라인으로 편리하게 PT 상담을 신청하세요.</div>
+											<div class="sys-btn">
+												<a th:href="@{/apply/apply}"> <img
+													src="https://www.bodychannel.co.kr/dist/img/main/sys_main_btn@2x.png"
+													width="154" height="44" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+		</section>
+		<div class="MuscleMatrix-summary-wrap">
+			<div class="overlaybg"></div>
+			<div class="parallax-content">
+				<div class="letter-container">
+					<div class="logo"
+						style="text-align: center; padding-bottom: 2.5rem">
+						<img src="/images/MuscleMatrixLogo.png" width="240" height="60" />
+					</div>
+					<div class="real-letter-wrap">
+						<div class="real-letter-wrapdiv">
+							<span class="count" th:text="${todayCount}">금일 가입자 수</span>
+							<div class="yellow-bar"></div>
+							<h3>
+								<span class="countname">금일 가입자</span>
+							</h3>
+						</div>
+						<div class="real-letter-wrapdiv">
+							<span class="count" th:text="${totalCount}">누적 가입자 수</span>
+							<div class="yellow-bar"></div>
+							<h3>
+								<span class="countname">누적 회원수</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="MuscleMatrix-health-wrap">
+			<div class="MuscleMatrix-health-container">
+				<div class="MuscleMatrix-health-containerDiv">
+					<h1 class="MuscleMatrix-title-letter" style="color: #fe474a">
+						MuscleMatrix 건강 캠페인</h1>
+					<p class="MuscleMatrix-subtitle-letter">MuscleMatrix는 지역 주민들의
+						건강과 삶의 질을 높이기 위해 힘쓰고 있습니다.</p>
+					<div class="MuscleMatrix-first-icons">
+						<div class="left-icon">
+							<img
+								src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon1.png" />
+						</div>
+						<div class="left-icon">
+							<img
+								src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon2.png" />
+						</div>
+						<div class="left-icon">
+							<img
+								src="https://www.bodychannel.co.kr/dist/img/main/health_news_icon3.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="MuscleMatrix-service-wrap"
+			style="background-image: url(https://www.bodychannel.co.kr/dist/img/marble_background.png); background-size: cover; padding: 50px 0 0; margin-bottom: 100px;">
+			<div class="MuscleMatrix-service-container">
+				<div class="MuscleMatrix-service-containerDiv">
+					<div class="MuscleMatrix-service-fD" style="margin-bottom: 50px">
+						<img src="https://www.bodychannel.co.kr/dist/img/bodyzone.png" />
+					</div>
+					<div class="MuscleMatrix-service-sD">
+						<div class="MuscleMatrix-service-sDfD">
+							웨어러블을 착용하고 주 3회 이상 출석,<br /> 일일 500 Kcal 소모 목표를 달성해보세요!
+						</div>
+						<div class="MuscleMatrix-service-sDsD">
+							<span class="MuscleMatrix-service-fspan"
+								style="float: right; margin-right: -300px"><img
+								src="https://www.bodychannel.co.kr/dist/img/hrm_graph.png" /></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>
+
+	</div>
+
+
+
+</body>
+<script src="/js/main/main.js"></script>
 </html>

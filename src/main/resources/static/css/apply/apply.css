@@ -448,7 +448,7 @@ ol {
 }
 
 .mt15 {
-    margin-top: 15px !important;
+    margin-top: 50px !important;
 }
 
 .col-md-6 {
@@ -503,7 +503,7 @@ ol {
     background-color: #e7e7e7;
     padding: 0.2rem 0.5rem;
     border-radius: 1rem;
-    width: 32%;
+    width: 60%;
     text-align: center;
     margin-right: 0.5rem;
     margin-top: 0.5rem;
@@ -559,10 +559,11 @@ ol {
     background-color: #e7e7e7;
     padding: 0.2rem 0.5rem;
     border-radius: 1rem;
-    width: 32%;
+    width: inherit;
     text-align: center;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     margin-top: 0.5rem;
+    font-size: 17px;
 }
 
 .teacher-kakaochat {
@@ -575,7 +576,7 @@ ol {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 15px;
-    width:52%;
+    width:27%;
 }
 
 .teacher-kakaochat:hover {

@@ -12,7 +12,7 @@
 	data-whatIsThis="헤더CSS임포트" />
 <link rel="stylesheet" href="/css/main/footer.css"
 	data-whatIsThis="푸터CSS임포트" />
-
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <title>그룹PT</title>
 </head>
 
@@ -152,10 +152,11 @@
 								<div class="bot-list">
 									<div class="list-box">
 										<!-- 선택한것에 active클래스가 붙음 -->
-										<th:block th:each="monday: ${mondays}">
-											<div class="select active" data-num="1" th:text="${monday.getEvent_name()}">
-												이벤트 운동 이름
-												<div class="select-desc" th:text="${monday.getEvent_content()}">이벤트 운동 설명</div>
+										<th:block th:each="monday,stat: ${mondays}">
+											<div class="select active" th:data-num="${stat.count}">
+												<div th:text="${monday.getEvent_name()}"></div>
+												<div class="select-desc"
+													th:text="${monday.getEvent_content()}">이벤트 운동 설명</div>
 											</div>
 										</th:block>
 									</div>
@@ -192,28 +193,15 @@
 								<div class="bot-list">
 									<div class="list-box">
 										<!-- 선택한것에 active클래스가 붙음 -->
-										<div class="select" data-num="1">
-											아침 활력 충전소
-											<div class="select-desc">가볍고 효과적인 아침 운동으로 하루를 활기차게 시작하는
-												클래스</div>
-										</div>
+										<th:block th:each="tuesday,stat: ${tuesdays}">
+											<div class="select active" th:data-num="${stat.count}">
+												<div th:text="${tuesday.getEvent_name()}"></div>
+												<div class="select-desc"
+													th:text="${tuesday.getEvent_content()}">이벤트 운동 설명</div>
+											</div>
+										</th:block>
 
-										<div class="select" data-num="2">
-											자세 교정 필라테스
-											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
-										</div>
 
-										<div class="select" data-num="3">
-											근력 UP! 체지방 DOWN!
-											<div class="select-desc">근력 운동과 유산소 운동을 병행하여 체지방 감소에
-												초점을 맞춘 프로그램</div>
-										</div>
-
-										<div class="select" data-num="4">
-											탄탄 코어 만들기
-											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
-												프로그램</div>
-										</div>
 
 									</div>
 								</div>
@@ -249,34 +237,14 @@
 								<div class="bot-list">
 									<div class="list-box">
 										<!-- 선택한것에 active클래스가 붙음 -->
-										<div class="select" data-num="1">
-											파워 숨쉬기 운동
-											<div class="select-desc">효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
+										<th:block th:each="wednesday,stat: ${wednesdays}">
+											<div class="select active" th:data-num="${stat.count}">
+												<div th:text="${wednesday.getEvent_name()}"></div>
+												<div class="select-desc"
+													th:text="${wednesday.getEvent_content()}">이벤트 운동 설명</div>
 											</div>
-										</div>
+										</th:block>
 
-										<div class="select" data-num="2">
-											체형 교정 스페셜
-											<div class="select-desc">개인별 체형 분석 후 맞춤형 교정 운동을 배우는 특별
-												클래스</div>
-										</div>
-
-										<div class="select" data-num="3">
-											신나는 줄넘기 교실
-											<div class="select-desc">다양한 줄넘기 기술을 배우며 즐겁게 유산소 운동하는
-												클래스</div>
-										</div>
-
-										<div class="select" data-num="4">
-											자세 교정 필라테스
-											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
-										</div>
-
-										<div class="select" data-num="5">
-											탄탄 코어 만들기
-											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
-												프로그램</div>
-										</div>
 
 
 									</div>
@@ -314,29 +282,14 @@
 								<div class="bot-list">
 									<div class="list-box">
 										<!-- 선택한것에 active클래스가 붙음 -->
-										<div class="select" data-num="1">
-											파워 숨쉬기 운동
-											<div class="select-desc">효과적인 호흡법과 함께하는 전신 운동으로 폐활량 증진
+										<th:block th:each="thursday,stat: ${thursdays}">
+											<div class="select active" th:data-num="${stat.count}">
+												<div th:text="${thursday.getEvent_name()}"></div>
+												<div class="select-desc"
+													th:text="${thursday.getEvent_content()}">이벤트 운동 설명</div>
 											</div>
-										</div>
-
-										<div class="select" data-num="2">
-											사이클링 & 힐링
-											<div class="select-desc">다양한 강도와 속도로 진행되는 실내 사이클링 수업</div>
-										</div>
-
-										<div class="select" data-num="3">
-											자세 교정 필라테스
-											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
-										</div>
-
-										<div class="select" data-num="4">
-											탄탄 코어 만들기
-											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
-												프로그램</div>
-										</div>
-
-
+										</th:block>
+										
 									</div>
 								</div>
 							</div>
@@ -375,28 +328,15 @@
 									<!-- 운동 영상 리스트 -->
 									<div class="list-box">
 										<!-- 선택한것이 active클래스가 붙음 -->
-										<div class="select" data-num="1">
-											아침을 깨우는 요가 스트레칭
-											<div class="select-desc">간단한 요가 동작으로 몸을 깨우고 하루를 활기차게
-												시작하는 수업</div>
-										</div>
+										<th:block th:each="friday,stat: ${fridays}">
+											<div class="select active" th:data-num="${stat.count}">
+												<div th:text="${friday.getEvent_name()}"></div>
+												<div class="select-desc"
+													th:text="${friday.getEvent_content()}">이벤트 운동 설명</div>
+											</div>
+										</th:block>
 
-										<div class="select" data-num="2">
-											자세 교정 필라테스
-											<div class="select-desc">코어 강화와 자세 교정에 중점을 둔 필라테스 수업</div>
-										</div>
-
-										<div class="select" data-num="3">
-											탄탄 코어 만들기
-											<div class="select-desc">다양한 복근 운동을 통해 코어 근력을 강화하는 집중
-												프로그램</div>
-										</div>
-
-										<div class="select" data-num="4">
-											사이클링 & 힐링
-											<div class="select-desc">다양한 강도와 속도로 진행되는 실내 사이클링 수업</div>
-										</div>
-
+										
 									</div>
 								</div>
 							</div>
