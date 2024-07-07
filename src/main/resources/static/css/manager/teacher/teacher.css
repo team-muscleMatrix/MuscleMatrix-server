@@ -1526,7 +1526,7 @@ ul.content-name-detail {
 
 .teacher-programs {
     list-style-type: none;
-    padding: 0;
+    padding-left: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;

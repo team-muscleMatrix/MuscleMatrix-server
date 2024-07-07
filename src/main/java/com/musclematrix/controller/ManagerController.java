@@ -12,12 +12,12 @@ import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -44,7 +44,6 @@ public class ManagerController extends BaseController {
 	private final ProgramService programService;
 	private final TeacherService teacherService;
 	private final MachineService machineService;
-	
 
 	public List<TeacherDTO> getTeacherDTO(List<Teacher> teachers) {
 		List<TeacherDTO> tvds = new ArrayList<>();
@@ -106,11 +105,13 @@ public class ManagerController extends BaseController {
 			return "redirect:/manager/login";
 
 		List<Teacher> teachers = teacherService.findAll();
-
 		List<TeacherDTO> tvds = getTeacherDTO(teachers);
 
 		model.addAttribute("tvds", tvds);
 		model.addAttribute("teacherCnt", teachers.size()); // 총 강사 갯수
+		model.addAttribute("teacher", null);
+		model.addAttribute("history", null);
+		model.addAttribute("program", null);
 
 		return "/manager/teacher/teacher";
 	}
@@ -119,8 +120,7 @@ public class ManagerController extends BaseController {
 	private String uploadDir;
 
 	@PostMapping("/manager/teacher/addmachine")
-	public String addMachine(@RequestParam("file") MultipartFile file,
-			@RequestParam("machine-name") String name) {
+	public String addMachine(@RequestParam("file") MultipartFile file, @RequestParam("machine-name") String name) {
 		Map<String, Object> response = new HashMap<>();
 
 		if (file.isEmpty()) {
@@ -128,7 +128,7 @@ public class ManagerController extends BaseController {
 
 			return "redirect:/manager/teacher";
 		}
-		
+
 		String machine_profile = null;
 
 		try {
@@ -153,84 +153,163 @@ public class ManagerController extends BaseController {
 			Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
 			machine_profile = "/upload/" + fileName;
-			
+
 			log.info("파일 저장 경로: " + filePath.toString());
 			log.info("파일 업로드 성공");
-			
+
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
 			log.error("파일 업로드 실패");
 
 			return "redirect:/manager/teacher";
 		}
-		
-		//기구를 DB에 저장
+
+		// 기구를 DB에 저장
 		Machine machine = new Machine();
 		machine.setMachine_name(name);
 		machine.setMachine_profile(machine_profile);
 		machineService.save(machine);
-		
+
 		return "redirect:/manager/teacher";
 	}
+
+	// 강사저장
+	@PostMapping("/manager/teacher/addteacher")
+	public String addTeacher(@RequestParam("teacherImageInput") MultipartFile file,
+			@RequestParam("teacher-name") String name, @RequestParam("teacher-link") String link,
+			@RequestParam("teacher-background") String[] backgrounds, @RequestParam("teacher-program") String[] programs) {
+
+		if (file.isEmpty()) {
+			log.error("파일이 비어있습니다.");
+
+			return "redirect:/manager/teacher";
+		}
+
+		String teacher_profile = null;
+
+		try {
+			// 프로젝트 루트 디렉토리 얻기
+			String projectDir = System.getProperty("user.dir");
+
+			// 업로드 디렉토리 경로 생성 (절대 경로)
+			Path uploadPath = Paths.get(projectDir, uploadDir).toAbsolutePath().normalize();
+
+			// 디렉토리가 존재하지 않으면 생성
+			Files.createDirectories(uploadPath);
+
+			// 원본 파일명에서 확장자 추출
+			String originalFilename = StringUtils.cleanPath(file.getOriginalFilename());
+			String fileExtension = StringUtils.getFilenameExtension(originalFilename);
+
+			// 고유한 파일명 생성
+			String fileName = UUID.randomUUID().toString() + "." + fileExtension;
+			Path filePath = uploadPath.resolve(fileName);
+
+			// 파일 저장
+			Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+
+			teacher_profile = "/upload/" + fileName;
+
+			log.info("파일 저장 경로: " + filePath.toString());
+			log.info("파일 업로드 성공");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+			log.error("파일 업로드 실패");
+
+			return "redirect:/manager/teacher";
+		}
+
+		// DB에 강사 저장
+		Teacher teacher = new Teacher();
+		teacher.setTeacher_name(name);
+		teacher.setTeacher_profile(teacher_profile);
+		teacher.setTeacher_KAKAOLINK(link);
+
+		teacherService.save(teacher); // 우선 현재 강사를 저장
+
+		Teacher addTeacher = teacherService.findByTeacherProfile(teacher_profile);
+
+		// 약력 저장
+		for (String b : backgrounds) {
+			History history = new History();
+			history.setHistory_content(b);
+			history.setTeacher(addTeacher);
+			historyService.save(history);
+		}
+
+		// 진행 프로그램 저장
+		for (String p : programs) {
+			Program program = new Program();
+			program.setProgram_content(p);
+			program.setTeacher(addTeacher);
+			programService.save(program);
+		}
+
+		return "redirect:/manager/teacher";
+	}
+
+	// 강사 검색 결과
+	@GetMapping("/manager/teacher/search")
+	public String asyncUserSearch(HttpSession session, @RequestParam("text") String text, Model model) {
+		if (!checkManagerLogin(session))
+			return "redirect:/manager/login";
+
+		// 전달받은 text검색어로 검색
+		List<Teacher> teachers = teacherService.findAllByName(text);
+		List<TeacherDTO> tvds = getTeacherDTO(teachers);
+
+		model.addAttribute("tvds", tvds);
+		model.addAttribute("teacherCnt", teachers.size()); // 총 강사 갯수
+		return "/manager/teacher/teacher :: #teacherList";
+	}
+
 	
-	
-	
-	
-	
-//	
-//	@PostMapping("/manager/teacher/addteacher")
-//  public String addTeacher(
-//          @RequestParam("teacherImageInput") MultipartFile file,
-//          @RequestParam("teacher-name") String name,
-//          @RequestParam("teacher-link") String link,
-//          @RequestParam("teacher-background") String[] backgrounds,
-//          @RequestParam("teacher-program") String[] programs) {
-//      
-//      Map<String, Object> response = new HashMap<>();
-//
-//      if (file.isEmpty()) {
-//  			log.error("파일이 비어있습니다.");
-//
-//  			return "redirect:/manager/teacher";
-//  		}
-//
-//      try {
-//          // 프로젝트 루트 디렉토리 얻기
-//          String projectDir = System.getProperty("user.dir");
-//
-//          // 업로드 디렉토리 경로 생성 (절대 경로)
-//          Path uploadPath = Paths.get(projectDir, uploadDir).toAbsolutePath().normalize();
-//
-//          // 디렉토리가 존재하지 않으면 생성
-//          Files.createDirectories(uploadPath);
-//
-//          // 원본 파일명에서 확장자 추출
-//          String originalFilename = StringUtils.cleanPath(file.getOriginalFilename());
-//          String fileExtension = StringUtils.getFilenameExtension(originalFilename);
-//
-//          // 고유한 파일명 생성
-//          String fileName = UUID.randomUUID().toString() + "." + fileExtension;
-//          Path filePath = uploadPath.resolve(fileName);
-//
-//          // 파일 저장
-//          Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-//
-//          response.put("success", true);
-//          response.put("message", "파일 업로드 성공");
-//          response.put("fileName", fileName);
-////          return ResponseEntity.ok(response);
-//      } catch (IOException e) {
-//          e.printStackTrace();
-//          response.put("success", false);
-//          response.put("message", "파일 업로드 실패: " + e.getMessage());
-////          return ResponseEntity.internalServerError().body(response);
-//      }
-//  }
-	
-	
-	
-	
-	
+
+	// 강사 삭제
+	@PostMapping("/manager/teacher/delete/delete")
+	public String asyncTeacherDelete(@RequestBody Map<String, Object> data, Model model, HttpSession session) {
+		if (!checkManagerLogin(session))
+			return "redirect:/manager/login";
+
+		// 삭제 로직 진행
+		List<Long> teacherIds = new ArrayList<>();
+		if (data.containsKey("teacherIds")) {
+			Object teacherIdsObj = data.get("teacherIds");
+			if (teacherIdsObj instanceof List) {
+				List<?> teacherIdsList = (List<?>) teacherIdsObj;
+				for (Object id : teacherIdsList) {
+//					log.error(String.valueOf(id));
+					if (id instanceof Long) {
+						teacherIds.add((Long) id);
+					} else if (id instanceof String) {
+						teacherIds.add(Long.parseLong((String) id));
+					}
+				}
+			}
+		}
+		// 실제 삭제 진행
+		for (Long teacher_id : teacherIds) {
+			// log.error(String.valueOf(teacher_id));
+			// 약력 삭제
+			historyService.deleteById(teacher_id);
+
+			// 진행 프로그램 삭제
+			programService.deleteById(teacher_id);
+
+			// 강사 삭제
+			teacherService.deleteById(teacher_id);
+		}
+
+		// 다시 페이지 로딩
+		List<Teacher> teachers = teacherService.findAll();
+		List<TeacherDTO> tvds = getTeacherDTO(teachers);
+
+		model.addAttribute("tvds", tvds);
+		model.addAttribute("teacherCnt", teachers.size()); // 총 강사 갯수
+		return "/manager/teacher/teacher :: #teacherList";
+	}
 
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -107,212 +107,102 @@
                         </p>
                     </div>
                     <div class="pts-fact1-wrap">
-                        <!-- mach-box -->
+                    
+                        
                         <div class="mach-box swiper-container swiper-container-css-mode this1">
                             <div class="top-logo tac"><img
                                     src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_logo1.png"></div>
 
+														<!-- 슬라이드1 -->
                             <div class="bot-wrap swiper-wrapper this1">
+                            
+                            		<th:block th:each="item : ${set1}">
                                 <div class="bot-img-box swiper-slide swiper-slide-active" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img1.jpg">
+                                    <div>
+                                    	<img th:src="${item.getMachine_profile()}">
                                     </div>
-                                    <div class="img-txt">
+                                    <div class="img-txt" th:text="${item.getMachine_name()}">
                                         <p>Leg Press</p>
-                                        <p>레그 프레스</p>
                                     </div>
                                 </div>
-                                <div class="bot-img-box swiper-slide swiper-slide-next" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img2.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Leg Extension</p>
-                                        <p>레그 익스텐션</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img3.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Pectoral</p>
-                                        <p>펙토럴</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="	https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img4.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Total Abdominal</p>
-                                        <p>토탈 업도미널</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img13.png">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Prone Leg Curl</p>
-                                        <p>프론 레그컬</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img14.png">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Cable Stations 5</p>
-                                        <p>케이블 스테이션5</p>
-                                    </div>
-                                </div>
+                                </th:block>
+                                
                             </div>
-                            <!-- Add Arrows -->
-                            <!-- swiper-button-disabled클래스가 붙으면 투명도 적용되서 비활성화 표시 -->
+
                             <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                                 aria-disabled="false" style="height: 16%;"></div>
                             <div class=" swiper-button-prev" tabindex="-1" style="height: 16%;"></div>
-                            <!-- Add Pagination -->
+
                             <div class=" swiper-pagination"></div>
 
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                         </div>
-                        <!--// mach-box -->
 
-                        <!-- mach-box -->
+                        
                         <div class="mach-box swiper-container swiper-container-css-mode this2">
                             <div class="top-logo tac"><img
                                     src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_logo2.png"></div>
+                            
+                            <!-- 슬라이드2 -->
                             <div class="bot-wrap swiper-wrapper this2">
+                            		<th:block th:each="item : ${set2}">
                                 <div class="bot-img-box swiper-slide swiper-slide-active" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img5.jpg">
+                                    <div>
+                                    	<img th:src="${item.getMachine_profile()}">
                                     </div>
                                     <div class="img-txt">
-                                        <p>Climbmill</p>
-                                        <p>클라이밀</p>
+                                        <p th:text="${item.getMachine_name()}">기구 이름</p>
                                     </div>
                                 </div>
-                                <div class="bot-img-box swiper-slide swiper-slide-next" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img6.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Treadmill</p>
-                                        <p>트레드밀</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img7.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Rower</p>
-                                        <p>로워</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img8.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Suspension Elliptical</p>
-                                        <p>서스펜션 일렙티컬</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img15.png">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Suspension</p>
-                                        <p>서스펜션</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img16.png">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Low</p>
-                                        <p>로우</p>
-                                    </div>
-                                </div>
+                                </th:block>
 
                             </div>
-                            <!-- Add Arrows -->
+
                             <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                                 aria-disabled="false" style="height: 16%;"></div>
                             <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
                                 aria-label="Previous slide" aria-disabled="true" style="height: 16%;"></div>
-                            <!-- Add Pagination -->
+
                             <div class="swiper-pagination"></div>
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                         </div>
-                        <!--// mach-box -->
 
-                        <!-- mach-box -->
+
+
                         <div class="mach-box swiper-container swiper-container-css-mode this3">
                             <div class="top-logo tac"><img
                                     src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_logo3.png"></div>
+                            <!-- 슬라이드3 -->
                             <div class="bot-wrap swiper-wrapper this3">
+                            		<th:block th:each="item : ${set3}">
                                 <div class="bot-img-box swiper-slide swiper-slide-active" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img17.png">
+                                    <div>
+                                    	<img th:src="${item.getMachine_profile()}">
                                     </div>
                                     <div class="img-txt">
-                                        <p>Hammer Lat pull down</p>
-                                        <p>해머 랫 풀 다운</p>
+                                        <p th:text="${item.getMachine_name()}">기구 이름</p>
                                     </div>
                                 </div>
-                                <div class="bot-img-box swiper-slide swiper-slide-next" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img18.png">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Low row</p>
-                                        <p>로우 로우</p>
-                                    </div>
-                                </div>
-
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img9.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Jammer</p>
-                                        <p>잼머</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img10.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Combo Incline</p>
-                                        <p>콤보 인클라인</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img11.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Seated Row</p>
-                                        <p>시티드 로우</p>
-                                    </div>
-                                </div>
-                                <div class="bot-img-box swiper-slide" style="width: 281px;">
-                                    <div><img src="https://www.bodychannel.co.kr/dist/img/ptshop/pts_mach_img12.jpg">
-                                    </div>
-                                    <div class="img-txt">
-                                        <p>Fixed Pulldown</p>
-                                        <p>픽스드 풀다운</p>
-                                    </div>
-                                </div>
+                                </th:block>
+                                
                             </div>
-                            <!-- Add Arrows -->
+
                             <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                                 aria-disabled="false" style="height: 16%;"></div>
                             <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button"
                                 aria-label="Previous slide" aria-disabled="true" style="height: 16%;"></div>
-                            <!-- Add Pagination -->
+
                             <div class="swiper-pagination"></div>
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                         </div>
-                        <!--// mach-box -->
+
                     </div>
                 </div>
-                <!--// 프리미엄 머신 -->
+
 
 
 
             </div>
-            <!-- End .container -->
         </section>
 
 				<div th:replace="~{main/footer :: footer}">푸터파일 가져오는곳</div>

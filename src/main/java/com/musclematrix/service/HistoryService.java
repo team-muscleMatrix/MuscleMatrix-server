@@ -21,5 +21,17 @@ public class HistoryService {
 	public List<History> findAllByTeacherId(long teacher_id){
 		return historyRepository.findAllByTeacherId(teacher_id);
 	}
+	
+	//약력 저장
+	@Transactional
+	public void save(History history) {
+		historyRepository.save(history);
+	}
+	
+	//강사 id와 일치하는 약력들을 전부 삭제
+	@Transactional
+	public void deleteById(long teacher_id) {
+		historyRepository.deleteByTeacherId(teacher_id);
+	}
 
 }

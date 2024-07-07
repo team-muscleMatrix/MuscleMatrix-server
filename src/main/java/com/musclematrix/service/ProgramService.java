@@ -23,12 +23,17 @@ public class ProgramService{
 		return programRepository.save(program);
 	}
 	
-	//teacher_id로 진행 프로그램을 전부 찾아오기
+	//강사 id로 진행 프로그램을 전부 찾아오기
 	@Transactional
 	public List<Program> findAllByTeacherId(long teacher_id){
 		return programRepository.findAllByTeacherId(teacher_id);
 	}
 	
+	//강사 id와 같은 모든 프로그램 삭제
+	@Transactional
+	public void deleteById(long teacher_id) {
+		programRepository.deleteByTeacherId(teacher_id);
+	}
 	
 	
 }
