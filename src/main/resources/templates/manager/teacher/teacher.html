@@ -256,10 +256,7 @@
       <div class="inner-musclematrix-layer inner-musclematrix-layer4">
         
         
-        <form class="teacherForm">
-          <input type="hidden" name="userId" value="">
-          <input type="hidden" name="contentNo" value="">
-
+        <form class="teacherForm" action="/manager/teacher/addteacher" method="POST" id="teacherForm" enctype="multipart/form-data">
           <fieldset>
             <legend class="ir-pm">강사 등록 폼</legend>
 
@@ -268,6 +265,7 @@
 
 
               <div class="teacher-pic">
+              
                 <!-- 서버에서  teacherImageInput키로 업로드한 이미지를 받을 수 있음-->
                 <input type="file" name="teacherImageInput" id="teacherImageInput" accept="image/*"
                   style="display: none;">
@@ -288,7 +286,9 @@
 
               <div class="dynamic-input-container">
                 <h4>강사 약력</h4>
-                <ul id="teacherBackgroundList"></ul>
+                <ul id="teacherBackgroundList">
+                
+                </ul>
                 <button type="button" id="addBackgroundBtn" class="add-btn">+</button>
               </div>
 
@@ -317,7 +317,7 @@
         
         
 <!--         실제로는 js를 이용해서 POST전송을 한다. -->
-        <form class="machineForm" action="/manager/teacher/addmachine" method="POST" id="loginForm" enctype="multipart/form-data">
+        <form class="machineForm" action="/manager/teacher/addmachine" method="POST" id="machineForm" enctype="multipart/form-data">
           <input type="hidden" name="userId" value="">
           <input type="hidden" name="contentNo" value="">
 

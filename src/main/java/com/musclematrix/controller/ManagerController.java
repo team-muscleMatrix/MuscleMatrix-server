@@ -173,5 +173,64 @@ public class ManagerController extends BaseController {
 		
 		return "redirect:/manager/teacher";
 	}
+	
+	
+	
+	
+	
+//	
+//	@PostMapping("/manager/teacher/addteacher")
+//  public String addTeacher(
+//          @RequestParam("teacherImageInput") MultipartFile file,
+//          @RequestParam("teacher-name") String name,
+//          @RequestParam("teacher-link") String link,
+//          @RequestParam("teacher-background") String[] backgrounds,
+//          @RequestParam("teacher-program") String[] programs) {
+//      
+//      Map<String, Object> response = new HashMap<>();
+//
+//      if (file.isEmpty()) {
+//  			log.error("파일이 비어있습니다.");
+//
+//  			return "redirect:/manager/teacher";
+//  		}
+//
+//      try {
+//          // 프로젝트 루트 디렉토리 얻기
+//          String projectDir = System.getProperty("user.dir");
+//
+//          // 업로드 디렉토리 경로 생성 (절대 경로)
+//          Path uploadPath = Paths.get(projectDir, uploadDir).toAbsolutePath().normalize();
+//
+//          // 디렉토리가 존재하지 않으면 생성
+//          Files.createDirectories(uploadPath);
+//
+//          // 원본 파일명에서 확장자 추출
+//          String originalFilename = StringUtils.cleanPath(file.getOriginalFilename());
+//          String fileExtension = StringUtils.getFilenameExtension(originalFilename);
+//
+//          // 고유한 파일명 생성
+//          String fileName = UUID.randomUUID().toString() + "." + fileExtension;
+//          Path filePath = uploadPath.resolve(fileName);
+//
+//          // 파일 저장
+//          Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+//
+//          response.put("success", true);
+//          response.put("message", "파일 업로드 성공");
+//          response.put("fileName", fileName);
+////          return ResponseEntity.ok(response);
+//      } catch (IOException e) {
+//          e.printStackTrace();
+//          response.put("success", false);
+//          response.put("message", "파일 업로드 실패: " + e.getMessage());
+////          return ResponseEntity.internalServerError().body(response);
+//      }
+//  }
+	
+	
+	
+	
+	
 
 }
