@@ -155,13 +155,13 @@ editBtn.addEventListener('click', function () {
 //const addMachineModal = document.querySelector(".musclematrix-layer.machine");
 //const closeMacineBtn = document.querySelector(".btn-close.machine")
 
-addMachineBtn.addEventListener('click', function () {
-  addMachineModal.style.display = "block"
-});
-
-closeMacineBtn.addEventListener("click", function () {
-  addMachineModal.style.display = "none"
-})
+//addMachineBtn.addEventListener('click', function () {
+//  addMachineModal.style.display = "block"
+//});
+//
+//closeMacineBtn.addEventListener("click", function () {
+//  addMachineModal.style.display = "none"
+//})
 
 // 강사 이미지 첨부란
 //document.addEventListener('DOMContentLoaded', function () {
@@ -186,16 +186,23 @@ closeMacineBtn.addEventListener("click", function () {
 //});
 
 
-
 const addMachineBtn = document.querySelector(".addMachineBtn");
 const addMachineModal = document.querySelector(".musclematrix-layer.machine");
 const closeMacineBtn = document.querySelector(".btn-close.machine")
+
+addMachineBtn.addEventListener('click', function () {
+  addMachineModal.style.display = "block"
+});
+
+closeMacineBtn.addEventListener("click", function () {
+  addMachineModal.style.display = "none"
+})
 
 document.addEventListener('DOMContentLoaded', function () {
     const machinePic = document.querySelector('.machine-pic');
     const machineImageInput = document.getElementById('machineImageInput');
     const machineImage = document.getElementById('machineImage');
-    const loginForm = document.getElementById('loginForm');
+    const machineForm = document.getElementById('machineForm');
 
     machinePic.addEventListener('click', function () {
         machineImageInput.click();
@@ -212,10 +219,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    loginForm.addEventListener('submit', function (event) {
+    machineForm.addEventListener('submit', function (event) {
         event.preventDefault(); // 기본 제출 동작 방지
 
-				const formData = new FormData(loginForm);
+				const formData = new FormData(machineForm);
 				const imageFile = machineImageInput.files[0];
 
 				if (imageFile) {
@@ -283,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const removeBtn = document.createElement('button');
 
     input.type = 'text';
-    input.name = `${inputName}[]`;
+    input.name = `${inputName}`;
     input.required = true;
     input.addEventListener('input', adjustInputWidth);
     
@@ -324,9 +331,6 @@ document.addEventListener('DOMContentLoaded', function() {
     addDynamicInput(teacherProgramList, 'teacher-program');
   });
 });
-
-
-
 
 
 
