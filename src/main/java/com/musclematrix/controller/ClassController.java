@@ -42,19 +42,8 @@ public class ClassController extends BaseController {
 			List<History> historys = historyService.findAllByTeacherId(id);
 			List<Program> programs = programService.findAllByTeacherId(id);
 
-//			String historyBody = "";
-//			for (History history : historys) {
-//				historyBody += history.getHistory_content();
-//				historyBody += "<br>";
-//			}
-//			
-//			
-//			tvd.setHistoryBody(historyBody);
-
 			tvd.setHistorys(historys);
 			tvd.setPrograms(programs);
-			log.warn("historys size = " + historys.size());
-			log.warn("programs size = " + programs.size());
 
 			tvds.add(tvd);
 		}
@@ -67,7 +56,6 @@ public class ClassController extends BaseController {
 
 		List<Teacher> teachers = teacherService.findAll();
 
-		// tvd를 넘김
 		List<TeacherDTO> tvds = getTeacherDTO(teachers);
 		model.addAttribute("tvds", tvds);
 

@@ -151,9 +151,9 @@ editBtn.addEventListener('click', function () {
 
 
 // 기구등록
-const addMachineBtn = document.querySelector(".addMachineBtn");
-const addMachineModal = document.querySelector(".musclematrix-layer.machine");
-const closeMacineBtn = document.querySelector(".btn-close.machine")
+//const addMachineBtn = document.querySelector(".addMachineBtn");
+//const addMachineModal = document.querySelector(".musclematrix-layer.machine");
+//const closeMacineBtn = document.querySelector(".btn-close.machine")
 
 addMachineBtn.addEventListener('click', function () {
   addMachineModal.style.display = "block"
@@ -164,26 +164,105 @@ closeMacineBtn.addEventListener("click", function () {
 })
 
 // 강사 이미지 첨부란
+//document.addEventListener('DOMContentLoaded', function () {
+//  const machinePic = document.querySelector('.machine-pic');
+//  const machineImageInput = document.getElementById('machineImageInput');
+//  const machineImage = document.getElementById('machineImage');
+//
+//  machinePic.addEventListener('click', function () {
+//    machineImageInput.click();
+//  });
+//
+//  machineImageInput.addEventListener('change', function (event) {
+//    const file = event.target.files[0];
+//    if (file) {
+//      const reader = new FileReader();
+//      reader.onload = function (e) {
+//        machineImage.src = e.target.result;
+//      }
+//      reader.readAsDataURL(file);
+//    }
+//  });
+//});
+
+
+
+const addMachineBtn = document.querySelector(".addMachineBtn");
+const addMachineModal = document.querySelector(".musclematrix-layer.machine");
+const closeMacineBtn = document.querySelector(".btn-close.machine")
+
 document.addEventListener('DOMContentLoaded', function () {
-  const machinePic = document.querySelector('.machine-pic');
-  const machineImageInput = document.getElementById('machineImageInput');
-  const machineImage = document.getElementById('machineImage');
+    const machinePic = document.querySelector('.machine-pic');
+    const machineImageInput = document.getElementById('machineImageInput');
+    const machineImage = document.getElementById('machineImage');
+    const loginForm = document.getElementById('loginForm');
 
-  machinePic.addEventListener('click', function () {
-    machineImageInput.click();
-  });
+    machinePic.addEventListener('click', function () {
+        machineImageInput.click();
+    });
 
-  machineImageInput.addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        machineImage.src = e.target.result;
-      }
-      reader.readAsDataURL(file);
-    }
-  });
+    machineImageInput.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                machineImage.src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // 기본 제출 동작 방지
+
+				const formData = new FormData(loginForm);
+				const imageFile = machineImageInput.files[0];
+
+				if (imageFile) {
+				        formData.append('file', imageFile);
+				    } else {
+				        console.error('파일이 선택되지 않았습니다.');
+				        alert('이미지 파일을 선택해주세요.');
+				        return;
+				    }
+						
+						// 기구 이름이 입력되었는지 확인
+						    const machineName = document.querySelector('textarea[name="machine-name"]').value.trim();
+						    if (!machineName) {
+						        alert('기구 이름을 입력해주세요.');
+						        return;
+						    }
+
+				fetch('/manager/teacher/addmachine', {
+				        method: 'POST',
+				        body: formData
+				    })
+				    .then(response => response.json())
+				    .then(data => {
+				        if (data.success) {
+				            alert('기구가 성공적으로 등록되었습니다.');
+				            // 필요한 경우 페이지 리로드 또는 리다이렉트
+				        } else {
+				            console.error('기구 등록 실패:', data.message);
+				            alert('기구 등록에 실패했습니다. 다시 시도해주세요.');
+				        }
+				    })
+				    .catch(error => {
+				        console.error('기구 등록 중 오류 발생:', error);
+				        alert('기구 등록 중 오류가 발생했습니다. 다시 시도해주세요.');
+				    });
+						
+						
+						
+    });
 });
+
+
+
+
+
+
+
 
 
 
@@ -245,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addDynamicInput(teacherProgramList, 'teacher-program');
   });
 });
+
 
 
 

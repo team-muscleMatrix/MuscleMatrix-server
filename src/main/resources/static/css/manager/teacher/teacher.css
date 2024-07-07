@@ -793,7 +793,7 @@ div.compose-button {
 
 /* 체크박스 css */
 input.checkbox-input {
-    margin-right: -100px;
+    margin-right: 20px;
 }
 
 /* 체크박스 스타일링 */
@@ -838,7 +838,7 @@ ul.list-content {
 li.list-content {
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 40px;
+    padding-left: 8px;
     padding-right: 8px;
     border-bottom-width: 1px;
     align-items: center;
