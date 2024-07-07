@@ -29,7 +29,7 @@
     </style>
     <link
       rel="shortcut icon"
-      href="/images/glowritersFavicon.png"
+      href="/images/MuscleMatrixLogo.png"
       type="image/x-icon"
     />
     <!-- 여기까지는 무조건 고정으로 모든 페이지에 복붙하세요 -->
@@ -48,12 +48,14 @@
   </head>
   <body>
     <div class="admin-login">
+    
+    <form action="/manager/login" method="POST" id="loginForm">
       <div class="admin-login-warp">
         <img
           class="main-login-logo"
           src="/images/MuscleMatrixLogo.png"
         />
-        <div class="main-login-explain">Glowriters 관리자 페이지입니다.</div>
+        <div class="main-login-explain">MuscleMatrix 관리자 페이지입니다.</div>
         <input
           oninput="updateButtonStatus()"
           type="text"
@@ -108,6 +110,9 @@
         </div>
         <button class="main-login-button">로그인</button>
       </div>
+      </form>
+      
+      
     </div>
     <div id="admin-message-modal" class="hidden">
       <h4 class="admin-message-modal-title">회원정보를 잘못입력하였습니다.</h4>

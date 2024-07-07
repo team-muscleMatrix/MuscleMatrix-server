@@ -230,37 +230,30 @@
 
 						
 
-                    <!-- 강사를  3개씩  나열-->
+
                     <div class="row marginTop30">
+    <!-- 모델에 담긴 값을 가져옴 -->
+    <th:block th:each="tvd: ${tvds}">
+        <div class="col-lg-4 text-center padding30">
+            <img th:src="${tvd.teacher_profile}" class="width50P">
+            <div th:class="teacher_name" th:text="${tvd.teacher_name}">
+                강사 이름
+            </div>
 
-                        <!-- 모델에 담긴 값을 가져옴 -->
-                        <th:block th:each="tvd: ${tvds}">
-                        
-                        <div class="col-lg-4 text-center padding30">
-                            <img src="https://www.bodychannel.co.kr/dist/img/teacher_5.png" class="width50P">
-                            <div class="teacher_name" th:text="tvd.getTeacher_name()">
-                                강사 이름
-                            </div>
+            <div class="teacher_program_container">
+                <div th:class="teacher_program" th:each="program : ${tvd.programs}" th:text="${program.program_content}">
+                    운영하는 프로그램
+                </div>
+            </div>
 
-                            <div class="teacher_program_container">
-                            	<th:block th:each="program : ${tvd.getPrograms()}">
-                                <div class="teacher_program" th:text="program.getProgram_content())">
-                                	운영하는 프로그램
-                                </div>
-                               </th:block>
-                            </div>
-
-                            <ul class="teacher_intro this">
-                            	<th:block th:each="history : ${tvd.getHistorys()}">
-                                <li class="content" th:text="history.getContent()">
-                                	약력
-                                </li>
-                            	</th:block>
-                            </ul>
-                        </div>
-                        </th:block>
-
-                    </div>
+            <ul class="teacher_intro this">
+                <li th:class="content" th:each="history : ${tvd.historys}" th:text="${history.history_content}">
+                    약력
+                </li>
+            </ul>
+        </div>
+    </th:block>
+</div>
 
 
 <!--                     강사를  3개씩  나열 -->

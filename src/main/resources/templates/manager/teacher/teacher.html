@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8" />
@@ -27,6 +27,8 @@
   </style>
   <link rel="stylesheet" href="/css/manager/teacher/teacher.css" />
   <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<!--   비동기 통신을 편리하게 사용하기위해 jquery사용 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>통합 관리</title>
 </head>
 
@@ -53,7 +55,7 @@
               <div class="profile-inner">
                 <button aria-label="profile image" class="profile-icon" type="button"
                   style="width: 68px; height: 68px; outline: none">
-                  <img src="/images/파비콘" alt="프로필 이미지" sizes="(max-width: 240px) 100vw, 240px"
+                  <img src="/images/favicon.png" alt="프로필 이미지" sizes="(max-width: 240px) 100vw, 240px"
                     decoding="async" data-nimg="fill" class="profile-img" loading="lazy" style="
                         position: absolute;
                         height: 100%;
@@ -67,7 +69,7 @@
                 </button>
               </div>
               <h2 class="profile-name">관리자</h2>
-              <a target="_blank" href="#">
+              <a target="_blank" href="/manager/logout">
                 <button class="mypage" aria-label="button" type="button">
                   <div class="mypage-name">
                     <div>로그아웃</div>
@@ -150,7 +152,7 @@
                         <div class="flex">
                           <p class="lecture-info">강사 정보</p>
                           <div class="lecture-info-num">
-                            <p class="lecture-info-num">1</p>
+                            <p class="lecture-info-num" th:text="${teacherCnt}">총 강사 갯수</p>
                           </div>
                         </div>
                       </button>
@@ -184,48 +186,41 @@
                 <div class="category-inner" style="width: 80px">진행 프로그램</div>
                 <!-- <div class="category-inner">게시일</div> -->
               </div>
+              
               <ul class="list-content">
-
+              
+								<th:block th:each="item : ${tvds}">
+								
                 <li class="list-content">
                   <input type="checkbox" class="checkbox-input" />
                   <button class="text-left">
                     <div class="list-content-wrap">
                       <div class="list-content-container">
-                        <img class="teacher-img" src="/images/blank-image.png">
+                        <img class="teacher-img" th:src="${item.getTeacher_profile()}">
                         <div class="list-content-inner">
                           <div class="content-name">
-                            <p class="content-name">강사 이름 1</p>
+                            <p class="content-name" th:text="${item.getTeacher_name()}">강사 이름</p>
                           </div>
-                          <ul class="content-name-detail">
-                            <li class="detail">약력 1</li>
-                            <li class="detail">약력 1</li>
-                            <li class="detail">약력 1</li>
+                          <ul class="content-name-detail" >
+                            <li class="detail" th:each="history : ${item.historys}" th:text="${history.history_content}">
+                            	약력 
+                            </li>
                           </ul>
-                          <!-- <p class="content-name-detail">
-                            약력들<br>
-                            피트니스 교육 Muscle Lab 설립 및 CEO<br>
-                            피트니스 무인 출입 통제 시스템 개발<br>
-                            피트니스 운영 ERP 시스템 개발<br>
-                            심장박동 트래킹 웨어러블 시스템 개발<br>
-                            서강대학교 최고경영자 과정 수료<br>
-                            외 다수
-                          </p> -->
+                          
                         </div>
                       </div>
                     </div>
                   </button>
                   <ul class="teacher-programs">
-                    <li class="program">진행프로그램 1</li>
-                    <li class="program">진행프로그램 2</li>
-                    <li class="program">진행프로그램 3</li>
+                    <li class="program" th:each="program : ${item.programs}" th:text="${program.program_content}">
+                    	진행프로그램
+                    </li>
                   </ul>
-                  <!-- <div class="teacher-programs">
-                    진행프로그램1, 프로그램2, 프로그램3 , 프로그램3 , 프로그램3 , 프로그램3 , 프로그램3 , 프로그램3 , 프로그램3
-                  </div> -->
+
                   <div class="content-open-wrap"></div>
 
                 </li>
-
+								</th:block>
 
               </ul>
 
@@ -259,6 +254,8 @@
 
     <div class="musclematrix-layer report-background teacher" style="display: none;">
       <div class="inner-musclematrix-layer inner-musclematrix-layer4">
+        
+        
         <form class="teacherForm">
           <input type="hidden" name="userId" value="">
           <input type="hidden" name="contentNo" value="">
@@ -306,8 +303,9 @@
               </div>
             </div>
           </fieldset>
-
         </form>
+        
+        
       </div>
     </div>
 
@@ -316,19 +314,22 @@
 
     <div class="musclematrix-layer report-background machine" style="display: none;">
       <div class="inner-musclematrix-layer inner-musclematrix-layer4">
-        <form class="machineForm">
+        
+        
+<!--         실제로는 js를 이용해서 POST전송을 한다. -->
+        <form class="machineForm" action="/manager/teacher/addmachine" method="POST" id="loginForm" enctype="multipart/form-data">
           <input type="hidden" name="userId" value="">
           <input type="hidden" name="contentNo" value="">
 
           <fieldset>
             <legend class="ir-pm">기구 등록 폼</legend>
-
+            
             <div class="report-body">
               <strong class="tit-report">기구 등록</strong>
 
               <div class="machine-pic">
                 <!-- 서버에서  teacherImageInput값을 키로 업로드한 이미지를 받을 수 있음-->
-                <input type="file" name="machineImageInput" id="machineImageInput" accept="image/*"
+                <input type="file" name="file" id="machineImageInput" accept="image/*"
                   style="display: none;">
                 <img id="machineImage" src="/images/blank-image.png" alt="강사 이미지">
               </div>
@@ -343,8 +344,9 @@
               </div>
             </div>
           </fieldset>
-
         </form>
+        
+        
       </div>
     </div>
 
