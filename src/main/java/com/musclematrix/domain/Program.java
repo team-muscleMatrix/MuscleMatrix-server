@@ -16,7 +16,6 @@ public class Program extends Period{
 	@Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long program_id;
-	
 	private String program_content;
 	
 	@ManyToOne 

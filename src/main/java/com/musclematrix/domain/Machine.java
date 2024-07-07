@@ -1,6 +1,5 @@
 package com.musclematrix.domain;
 
-import org.springframework.stereotype.Service;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

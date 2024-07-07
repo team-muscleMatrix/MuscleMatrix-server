@@ -125,10 +125,7 @@
                         <img class="add-button" src="/images/write.png">
                       </button>
 
-                      <!-- 강사  수정 버튼 -->
-                      <button class="button.add-button editBtn">
-                        <img class="add-button" src="/images/update.png">
-                      </button>
+
 
                       <!-- 삭제 버튼 -->
                       <button class="delete-button" aria-label="delete button" type="button">
@@ -169,7 +166,7 @@
                     <!-- 여기에 검색 창 추가 -->
                     <div class="search-bar">
                       <label class="search-bar">
-                        <input class="search-bar" placeholder="강사 검색" type="text" value />
+                        <input class="search-bar this" placeholder="강사 검색" type="text" value onkeydown="handleEnterKey(event)" />
                         <button aria-label="search button" class="search-bar" type="button">
                           <img class="search-logo" src="/images/search_icon.png" />
                           <img class="cancel-logo" src="/images/cancel.png" />
@@ -187,12 +184,11 @@
                 <!-- <div class="category-inner">게시일</div> -->
               </div>
               
-              <ul class="list-content">
+              <ul class="list-content" id="teacherList">
               
 								<th:block th:each="item : ${tvds}">
-								
-                <li class="list-content">
-                  <input type="checkbox" class="checkbox-input" />
+                <li class="list-content" th:teacher_id="${item.getTeacher_id()}">
+                  <input type="checkbox" class="checkbox-input"/>
                   <button class="text-left">
                     <div class="list-content-wrap">
                       <div class="list-content-container">
@@ -250,8 +246,7 @@
       <div class="delete-modal-bgcolor"></div>
     </div>
 
-
-
+<!--기구 등록 -->
     <div class="musclematrix-layer report-background teacher" style="display: none;">
       <div class="inner-musclematrix-layer inner-musclematrix-layer4">
         
@@ -311,7 +306,7 @@
 
 
 
-
+<!--기구 등록 -->
     <div class="musclematrix-layer report-background machine" style="display: none;">
       <div class="inner-musclematrix-layer inner-musclematrix-layer4">
         
@@ -350,7 +345,10 @@
       </div>
     </div>
 
+		
 
+		
+		
 
   </div>
 </body>
